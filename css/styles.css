@@ -21,6 +21,7 @@
 .logo{
   width: 176px;
   height: 176px;
+  margin-right: 5px;
 }
 .cabecera-div h1{
   font-size: 1.5rem;
@@ -95,6 +96,26 @@
   width: 100%;
 }
 
+.footer{
+  display:flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.footer-h3{
+  text-align: end;
+  width: 300px;
+}
+.footer-a{
+  margin-top: 50px;
+}
+.footer-a button{
+  margin-left: 15px;
+}
+.footer-logo img{
+  width: 150px;
+  height: 150px;
+}
 
 
 /* SECCION VIDEOS */
@@ -125,31 +146,56 @@
   border: black dashed 3px;
   border-radius: 15px;
 }
-.footer{
+
+/* SECCION SOBRE MI  */
+.main-about-sec{
+  text-align: start;
   display: grid;
+
+  padding:1rem;
+}
+.main-about-sec h3{
+  grid-column: span 2;
+  text-align: center;
+}
+.main-about-sec img{
+  width: 70%;
   padding: 1rem;
+  
+  object-fit: contain;
+}
+.main-about-img{
+  align-self: center;
+  grid-row: span 2;
 }
 
-.footer-h3{
-  text-align: start;
-  grid-row: auto;
-}
-.footer-a{
-  grid-column: auto;
-  width: 50%;
-}
-.footer-logo{
-  grid-column: auto;
-  justify-self: end;
-}
-.footer-logo img{
-  width: 150px;
-  height: 150px;
-}
-/* Media Query for Mobile Devices */
+
+
+
+/* ---------------------------- Media Query for Mobile Devices -------------------------- */
 @media (max-width: 480px) {
   .foto-header{
     display: none;
+  }
+  .cabecera-div h1{
+    margin-left: 0;
+  }
+  
+  .footer{
+    padding: .6rem;
+  }
+  .footer-logo{
+    display: none;
+  }
+  .footer-h3{
+    display: none;
+  }
+  .footer-a{
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .footer-a button{
+    margin: 5px 10px;
   }
 
   /* VIDEOS */
@@ -158,32 +204,51 @@
     width: 80%;
   }
   .main-video{
-  grid-column: span 2;
+    grid-column: span 2;
+  }
+  /* Sobre mi */
+  .main-about section{
+    padding: .5rem;
   }
 
+  /* Sobre mi */
+  .main-about-p{
+  grid-column: span 2;
+  padding: .3rem;
+  }
+  .main-about-p{
+    border: slategray 2px solid;
+  }
+  .main-about-img{
+    display: none;
+  }
+  .main-about-destacado ul li{
+  grid-row: span 2;
+  padding: .3rem;
+  }
+  
 }
-
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
   .foto-header{
     margin-left: 20px;
   }
-  
-
   .contenedor img{
     width: 100%;
     height: auto;
   }
-  
+
+  .footer-h3{
+    display: none;
+  }
 
    /* VIDEOS */
   .contenedor-videos iframe{
-    width: 70%;
+    width: 100%;
   }
   .main-video{
     grid-column: span 2;
   }
-  
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -204,24 +269,23 @@
   .contenedor img{
     height: auto;
   }
-  .reproductor{
-    width: 100%;
+  .footer-h3{
+    text-align: start;
   }
-  
   
   /* VIDEOS */
 
   .contenedor-videos iframe{
-    width: 70%;
+    width: 100%;
   }
   .main-video{
   grid-column: span 2;
+
   }
   .main-video iframe{
     margin-left: 20px;
   }
 }
-
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px){
@@ -257,10 +321,8 @@
   .contenedor-videos h2{
     text-align: center;
   }
-  .main-video-principal{
-    width: 800px;
-    height: 560px;
-    justify-self: center;
+  .main-video iframe{
+    margin-left: 20px;
   }
 }
 

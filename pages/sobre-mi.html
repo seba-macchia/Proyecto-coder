@@ -4,53 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
     <title> SOBRE MÍ </title>
   </head>
   <body>
-    <header>
-      <div>
+    <header class="cabecera">
+      <div class="cabecera-div">
+        <img class="logo" src="../img/logo.png" alt="Logo">
         <h1> Nes Campano </h1>
-        <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-        <a href="../index.html"><img src="../img/nes_header.png"
-            alt=" foto Nes Campano"></a>
+        <img class="foto-header" src="../img/nes_header.png" alt="foto_header">
       </div>
-      <nav>
-        <ul>
-          <li><a href="../index.html"> Home </a></li>
-          <li><a href="./musica.html"> Mi Música </a></li>
-          <li><a href="./videos.html"> Videos </a></li>
-          <li><a href="./contacto.html"> Contacto </a></li>
-        </ul>
+      <nav class="navbar navbar-expand-md  navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> Secciones</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+            <ul class="navbar-nav me-3 ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="../index.html"> HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-3 active" href="../pages/musica.html"> VIDEOS </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-3 active" href="../pages/sobre-mi.html"> MI MÚSICA </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-3 active" href="../pages/contacto.html"> CONTACTO </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
+    <main class="main-about">
       <h2>Sobre Mí</h2>
-      <section>
+      <section class="main-about-sec">
         <h3> Nes por Nestor! </h3>
-        <p>Soy cantante, autor y compositor nacido y criado en Ingeniero White,
-          localidad del sur bonaerense. A los 8 años formé parte del coro de la
-          Escuela Primaria N° 58, y ese momento fue un antes y un después,
-          porque encontré lo que quería hacer con pasión: cantar.</p>
-        <p>Conocí y experimenté diversos géneros y estilos, lo que me llevó a
-          encontrar en el pop el lugar en el que más cómodo me siento y el cual
-          me permite expresar lo que quiero compartir a través de las letras,
-          los acordes y en el escenario. </p>
-        <p>Vivo en la ciudad de Bahía Blanca, la cual me da las oportunidades de
-          trabajar y estudiar Canto lírico, en el Conservatorio de Música de la
-          ciudad. Decidido a ser cantante, grabé: #Naturalmente, en 2016 y
-          #Creo, en 2018; convoqué a músicos, algunos y a amigos, para que me
-          acompañen y con ellos realizo los shows. </p>
-        <p>La música es el motor de mi vida, aunque también me interesa conocer,
-          por mi laburo, sobre marketing, andar en bici -los auri no pueden
-          faltar-, tomar mate, compartir comidas con amig@s, ir a la playa y
-          estar junto al mar, amo la naturaleza, conocer gente, ciudades y
-          países diversos. Cantar con la guitarra y dejarme llevar. Me interesa
-          la filosofía oriental y el Budismo. Estoy en movimiento, con energía.
-        </p>
+        <section class="main-about-p">
+          <p >Soy cantante, autor y compositor nacido y criado en Ingeniero White,
+            localidad del sur bonaerense. A los 8 años formé parte del coro de la
+            Escuela Primaria N° 58, y ese momento fue un antes y un después,
+            porque encontré lo que quería hacer con pasión: cantar.</p>
+          <p>Conocí y experimenté diversos géneros y estilos, lo que me llevó a
+            encontrar en el pop el lugar en el que más cómodo me siento y el cual
+            me permite expresar lo que quiero compartir a través de las letras,
+            los acordes y en el escenario. </p>
+        </section>
+        <section class="main-about-img">
+        <img src="../img/nes-bariloche2.jpg" alt="nes-bariloche ">
+        </section>
+
+        <section class="main-about-p">
         <p>Si llegaste hasta acá es por qué me queres conocer mejor, por eso, te
           voy contar como viene mi año: </p>
         <p>Comencé el verano con recitales en la costa atlántica, en especial,
@@ -58,6 +68,12 @@
           quedarme en casa compuse una canción que sonó en varios medios del
           país, Santiago del Estero, Ciudad de Córdoba, Corrientes y Buenos
           Aires. </p>
+        </section>
+        <section class="main-about-img">
+          <img src="/img/nes-seba.jpg" alt="nes-seba">
+        </section>
+        
+        <section class="main-about-p">
         <p>El 2020 fue especial, con una pandemia que nos afectó, pude enfocarme
           y estar de lleno en la pre-producción del 3° álbum de estudio y
           terminando la carrera de Canto lírico. En Agosto fui seleccionado para
@@ -68,6 +84,8 @@
         <p>En el mientras tanto sigo activo en las redes, con entrevistas en
           distintos medios y participo de proyectos con músicos amigos, escribo,
           compongo...</p>
+        </section> 
+        <section class="main-about-p">
         <p>El 2019 fue un año cargado de energía y acontecimientos importantes.
         </p>
         <p>En diciembre cerré el año con una presentación en el espacio Clap,
@@ -81,6 +99,9 @@
         <p>Logré viajar con un hermano de la vida, amigo de siempre, por segunda
           vez a España, Italia y Francia, donde hice presentaciones de mis
           canciones y tuve contacto con radios para comenzar a sonar allá. </p>
+        </section>
+        
+        <section class="main-about-p">
         <p>Antes, recibí la invitación del Embajador de Egipto en Argentina, el
           Sr. Amin Meleika, por mi aporte a la cultura y música popular. Por
           este motivo viajé a la Ciudad de Buenos Aires, y seguimos en estrecho
@@ -89,6 +110,11 @@
           Nacional del Camarón y el Langostino ante un marco de más de 10.000
           personas, en mi querida localidad portuaria natal de Ingeniero White.
         </p>
+        </section>
+        <section class="main-about-img">  
+          <img src="../img/nes_embajador.jpg" alt="Nes embajador">
+        </section>
+        <section class="main-about-p">
         <p>Con las ganas de mostrar lo que brindo en el escenario y en busca de
           nuevas ideas artísticas desde la imágenes, produje video clips que
           pueden disfrutar en mi canal de Youtube. </p>
@@ -98,6 +124,12 @@
           septiembre de ese año en el auditorio Förum de Bahía Blanca. Invité a
           músicos reconocidos, colegas, con quienes brindamos un show a sala
           llena. </p>
+        </section>
+        <section class="main-about-img">
+          <img src="../img/nes_piano.jpeg" alt="nes piano">
+        </section>
+        
+        <section class="main-about-p">
         <p>Esto dio inicio a presentarlo con shows en diferentes partes del
           país, con notas en medios radiales y televisivos, a su vez, canté en
           eventos privados; fui invitado a presentarme en el ciclo “Música en el
@@ -110,6 +142,12 @@
           “Arriba los que van a White”. Tengo un hermano, nos acompañamos
           muchísimo. Mi viejo vive en Neuquén y nos vemos, no tanto como
           quisiera. </p>
+        </section>
+        <section class="main-about-img">
+          <img src="/img/10_jovenes_sobresalientes.jpg"
+            alt="10 jovenes sobresalientes">
+        </section>
+        <section class="main-about-p">
         <p>Siempre hay más... </p>
         <p>El 2016 es especial, te cuento. Un día tomé la decisión de plasmar mi
           pasión y realicé demos -pruebas-, hasta que finalmente lancé mi primer
@@ -122,6 +160,11 @@
           el logro y la identidad que construí como artista a lo largo de tantas
           experiencias y búsquedas; es mi alma y pasión en canciones, fue una
           gran apuesta. </p>
+        </section>
+        <section class="main-about-img">
+          <img src="/img/fiesta_camaron.jpg" alt="Fiesta  del camaron y el langostino">
+        </section>
+        <section class="main-about-p">
         <p>Vayamos al año 2009, cuando tenía 19 años me mudé a la Ciudad
           Autónoma de Buenos Aires, soñando que era el momento de dar el salto.
           La gran ciudad, las oportunidades y como dicen “Dios atiende allá”. En
@@ -136,7 +179,9 @@
           varios escenarios del país. Siempre traté de cumplir con el colegio, y
           a la par, me fui capacitando con maestros y profesores de canto,
           música y teatro. </p>
-        <section>
+        </section> 
+        
+        <article>
           <h4> Menciones y premios destacados: </h4>
           <ul>
             <li>2019. Fui premiado como joven Sobresaliente de la Pcia. de
@@ -154,20 +199,14 @@
               revelación en las Olimpiadas Municipales Internacionales en Villa
               Carlos Paz, Córdoba.</li>
           </ul>
-        </section>
-      </section>
-      <section>
-        <img src="/img/10_jovenes_sobresalientes.jpg"
-          alt="10 jovenes sobresalientes">
-        <img src="/img/fiesta_camaron.jpg"
-          alt="Fiesta del Camaron y el Langostino">
-        <img src="/img/nes_embajador.jpg" alt="Nes con el embajador de Egipto">
-        <img src="/img/nes_piano.jpeg" alt="Nes en el piano">
+        </article>
       </section>
     </main>
-    <footer>
-      <div>
+    <footer class="footer">
+      <div class="footer-h3">
         <h3>Encontrame acá:</h3>
+      </div>
+      <div class="footer-a">
         <a href="https://www.facebook.com/nesoficial"><button><i
               class="bi bi-facebook"></i> Facebook</button></a>
         <a href="https://twitter.com/NesCampano/"><button><i
@@ -181,6 +220,10 @@
         <a href="https://comunicacion360.com.ar/"><button><i
               class="bi bi-person-lines-fill"></i> CONTACTO</button></a>
       </div>
+      <div class="footer-logo">
+        <img src="../img/logo.png" alt="Logo">
+      </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
