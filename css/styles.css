@@ -148,27 +148,61 @@
 }
 
 /* SECCION SOBRE MI  */
-.main-about-sec{
-  text-align: start;
-  display: grid;
+.main-about h2{
+  font-size: 2rem;
+  padding: 1rem;
+}
 
+.main-about-sec{
+  /* text-align: start; */
+  display: grid;
   padding:1rem;
 }
 .main-about-sec h3{
   grid-column: span 2;
   text-align: center;
 }
-.main-about-sec img{
-  width: 70%;
+.main-about-img-left img{
+  width: 100%;
   padding: 1rem;
+  object-fit: contain;
   
+}
+.main-about-img-right img{
+  width: 100%;
+  padding: 1rem;
   object-fit: contain;
 }
-.main-about-img{
+.main-about-img-left{
+  width: 80%;
+  justify-self: center;
   align-self: center;
-  grid-row: span 2;
+}
+.main-about-img-right{
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+.main-about-p p{
+  font-size: 2vw;
+}
+.main-img-jov{
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+.main-img-jov img{
+  width: 100%;
 }
 
+.main-about-destacado h4{
+  text-align: center;
+  padding: .3rem;
+}
+.main-about-destacado ul li{
+  font-size: 2vw;
+  padding: .5rem;
+}
 
 
 
@@ -212,20 +246,43 @@
   }
 
   /* Sobre mi */
+  .main-about h2{
+    font-size: 1.2rem;
+  }
+  .main-about h3{
+    font-size: 1rem;
+  }
   .main-about-p{
   grid-column: span 2;
   padding: .3rem;
   }
-  .main-about-p{
-    border: slategray 2px solid;
+  .main-about-p p{
+    font-size: .8rem;
   }
-  .main-about-img{
-    display: none;
+  .main-about-destacado h4{
+    text-align: center;
+    font-size: 1rem;
+    padding: .3rem;
   }
   .main-about-destacado ul li{
-  grid-row: span 2;
+    font-size: .8rem;
+    padding: .5rem;
+  }
+
+  .main-about-img-right{
+    display: none;
+  }
+  .main-img-jov{
+    display: none;
+  }
+  .main-about-img-left img{
+    width: 250px;
+    height: 250px;
+  }
+  .main-about-destacado ul li{
   padding: .3rem;
   }
+  
   
 }
 /* Media Query for low resolution  Tablets, Ipads */
@@ -287,6 +344,7 @@
   }
 }
 
+
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px){
   .cabecera-div h1{
@@ -324,6 +382,14 @@
   .main-video iframe{
     margin-left: 20px;
   }
+  /* Sobre-Mi */
+  .main-about h2{
+    font-size: 3 rem;
+  }
+  .main-about h3{
+    font-size: 2rem;
+  }
+
 }
 
 
