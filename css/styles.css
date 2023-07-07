@@ -170,6 +170,9 @@
   font-size: 2rem;
   width: 70%;
 }
+.contenedor-videos h3{
+  color: #dda15e;
+}
 .main-video-principal{
   width: 100%;
   max-width: 100%;
@@ -280,6 +283,7 @@
 .main-musica h3{
   width: 80%;
   text-align: center;
+  color: #dda15e;
 }
 
 .main-disco{
