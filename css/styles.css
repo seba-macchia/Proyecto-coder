@@ -105,6 +105,7 @@
   border-radius: 10px;
   background-color: #e6e8e6;
   text-decoration: none;
+  font-size: 1.5rem ;
 }
 .main-a a:hover{
   font-size: 2rem;
@@ -191,6 +192,10 @@
 }
 
 /*----------------------- SECCION SOBRE MI  ------------------*/
+.main-about{
+  background-color: #5c677d;
+  padding: 1rem;
+}
 .main-about h2{
   color: #dda15e;
   text-align: center;
@@ -206,6 +211,7 @@
   grid-column: span 2;
   text-align: center;
   width: 50%;
+  color: #dda15e;
 }
 .main-about-img-left img{
   width: 100%;
@@ -233,6 +239,7 @@
 }
 .main-about-p p{
   font-size: 1.5vw;
+  color: azure;
 }
 .main-img-jov{
   width: 80%;
@@ -244,12 +251,15 @@
 }
 
 .main-about-destacado h4{
+  margin-top: 10px;
   text-align: center;
   padding: .3rem;
+  color: #dda15e;
 }
 .main-about-destacado ul li{
-  font-size: 2vw;
+  font-size: 1.7vw;
   padding: .5rem;
+  color: azure;
 }
 /* ----------------------- Seccion Mi Música  --------------------- */
 .main-musica{
@@ -313,6 +323,7 @@
 .main-form h3{
   text-align: center;
   font-size: 2rem;
+  color: #dda15e;
 }
 .form-group {
   margin-bottom: 20px;
@@ -404,6 +415,9 @@ input[type="reset"]:hover{
   }
   .footer-a button{
     margin: 5px 10px;
+  }
+  .main-a a{
+    font-size: .6rem;
   }
 
   /* ---------------------SECCION VIDEOS ------------------------------------------ */
@@ -509,6 +523,9 @@ input[type="reset"]:hover{
 
   .footer-h3{
     display: none;
+  }
+  .main-a a{
+    font-size: 1.4rem;
   }
 
    /* --------------- VIDEOS ----------------------- */
@@ -639,6 +656,9 @@ input[type="reset"]:hover{
 
   /* --------- CONTACTO ------------ */
   .main-contenedor h2{
+    font-size: 3rem;
+  }
+  .main-about-destacado h4{
     font-size: 3rem;
   }
 }
