@@ -227,6 +227,9 @@
   justify-self: center;
   align-self: center;
 }
+.main-about-p{
+  align-self: center;
+}
 .main-about-p p{
   font-size: 1.5vw;
 }
@@ -290,8 +293,10 @@
 
 /* --------------------------------- Sección Contacto -------------------------- */
 .main-contacto{
+  background-color: #5c677d;
   padding: 2rem;
 }
+
 
 .main-contacto h2{
   color: #dda15e;
