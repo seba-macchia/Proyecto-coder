@@ -316,7 +316,9 @@
 .form-group {
   margin-bottom: 20px;
 }
-
+.main-form-bot{
+  justify-content: space-between;
+}
 
 label {
   display: block;
