@@ -1,0 +1,95 @@
+/*--------------- SECCION VIDEOS ------------------*/
+.contenedor-videos{
+  text-align: start;
+  display: grid;
+  grid-template-rows: (4,300px);
+  justify-content: center;
+  padding: 1rem;
+  background-color: #5c677d;
+
+  & h2{
+    color: #dda15e;
+    text-align: center;
+    font-size: 2rem;
+    width: 70%;
+  }
+}
+
+// h3
+.contenedor-videos h3{
+  color: #dda15e;
+}
+
+/*  El maun contiene un video principal (destacado) */
+.main-video-principal{
+  width: 100%;
+  max-width: 100%;
+  grid-column: span 2;
+  grid-row: span 1;
+  text-align: center;
+
+  & iframe{
+    border: black dashed 3px;
+    border-radius: 15px;
+  }
+}
+
+/* también contiene dos videos menos destacados */
+.main-video{
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  grid-column: span 1;
+  grid-row: span 1;
+  padding: 1rem;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px){
+  .contenedor-videos iframe{
+    width: 80%;
+  }
+  .main-video{
+    grid-column: span 2;
+  }
+}
+
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){
+  .contenedor-videos iframe{
+    width: 100%;
+  }
+  .main-video{
+    grid-column: span 2;
+  }
+}
+
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+
+  .contenedor-videos iframe{
+    width: 100%;
+  }
+  .main-video{
+  grid-column: span 2;
+    & iframe{
+      margin-left: 20px;
+    }
+  }
+
+}
+
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+  .contenedor-videos h2{
+    text-align: center;
+    font-size: 3rem;
+  }
+  .main-video iframe{
+    margin-left: 20px;
+  }
+
+}

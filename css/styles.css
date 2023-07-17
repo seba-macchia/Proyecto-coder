@@ -1,37 +1,26 @@
+@charset "UTF-8";
 /* SACO LOS ELEMENTOS QUE POR DEFECTO  QUE TRAE CSS Y AGREGO ALGUNAS COSAS QUE VAN PARA TODO EL HTML */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: cursive;
-  
 }
+
 /* ------------ CLASE DEL HEADER (CABECERA) -------- */
-.cabecera{
+.cabecera {
   position: sticky;
   top: 0;
-  background-color:#e6e8e6;
+  background-color: #e6e8e6;
 }
-.cabecera-div{
+.cabecera-div {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem;
-  }
-
-
-.foto-header{
-  width: 176px;
-  height: 176px;
 }
-.logo{
-  width: 176px;
-  height: 176px;
-  margin-right: 5px;
-  
-}
-.cabecera-div h1{
+.cabecera-div h1 {
   font-size: 1.5rem;
   text-align: center;
   align-self: center;
@@ -39,148 +28,565 @@
   color: #dda15e;
 }
 
+/* foto-header */
+.foto-header {
+  width: 176px;
+  height: 176px;
+}
+
+/*  logo-header */
+.logo {
+  width: 176px;
+  height: 176px;
+  margin-right: 5px;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .foto-header {
+    display: none;
+  }
+  .cabecera-div h1 {
+    margin-left: 0;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .foto-header {
+    margin-left: 20px;
+  }
+}
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cabecera-div h1 {
+    font-size: 2.5rem;
+    margin-left: 20px;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) {
+  .cabecera-div h1 {
+    font-size: 3.5rem;
+  }
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=checkbox] {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+input[type=submit],
+input[type=reset] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+  background-color: aquamarine;
+  font-size: 1.5rem;
+}
+
+.main-form-bot input {
+  border: #dda15e solid 2px;
+  width: 300px;
+}
 
 /* Barra de navegacion */
-.container-fluid{
-  background-color:darkmagenta;
-}
-.navbar-collapse{
-  text-align: center; 
-  font-size: 1.3rem;
+.container-fluid {
+  background-color: darkmagenta;
 }
 
-.navbar-brand:hover, .navbar-brand:focus{
-  color: #dda15e;
+.navbar-collapse {
+  text-align: center;
+  font-size: 1.3rem;
 }
-.navbar-brand{
+.navbar-collapse-brand {
   font-weight: bold;
   color: #dda15e;
   font-size: 1.6rem;
   padding: 0;
   margin: 0;
 }
-.navbar-toggler{
+.navbar-collapse-brand:hover, .navbar-collapse-brand:focus {
+  color: #dda15e;
+}
+
+.nav-link {
+  color: white;
+  margin-left: 15px;
+}
+.nav-link:hover {
+  background-color: black;
+  color: bisque;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+.navbar-toggler {
   background-color: cornflowerblue;
   border-radius: 15px;
   border: 1px solid navajowhite;
 }
-.nav-link:hover {
-  background-color: black;
-  color:bisque;
-  font-size: 1.5rem;
-  border-radius: 10px;
+
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-collapse {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .navbar-brand {
+    display: none;
+  }
 }
-.nav-link{
-  color: white;
-  margin-left: 15px;
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) {
+  .navbar-collapse {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .navbar-brand {
+    display: none;
+  }
+}
+/* ----------------- FOOTER (CLASE FOOTER) -------------------- */
+.footer {
+  background-color: #e6e8e6;
+  border: black solid;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6rem;
 }
 
+.footer-h3 {
+  color: #dda15e;
+  text-align: end;
+  width: 300px;
+}
+
+.footer-a {
+  margin-top: 50px;
+}
+.footer-a button {
+  margin-left: 15px;
+}
+.footer-a button:hover {
+  background-color: #dda15e;
+  font-size: x-large;
+}
+
+/* logo del footer */
+.footer-logo img {
+  width: 150px;
+  height: 150px;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.6rem;
+  }
+  .footer-logo {
+    display: none;
+  }
+  .footer-h3 {
+    display: none;
+  }
+  .footer-a {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .footer-a button {
+    margin: 5px 10px;
+  }
+  .footer-a button:hover {
+    font-size: initial;
+    background-color: initial;
+  }
+}
+/* ------ MEDIA QUERY ( MIN-481 / MAX-767) --------- */
+/* Media Query for low resolution Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .footer-h3 {
+    display: none;
+  }
+}
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-h3 {
+    text-align: start;
+  }
+}
 /* ----------------- MAIN (CLASE CONTENEDOR) -------------------------- */
-.main-contenedor{
+.main-contenedor {
   background-color: #5c677d;
 }
-.main-div-contenedor{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.main-contenedor h2{
+.main-contenedor h2 {
   color: #dda15e;
   text-align: center;
   font-size: 2rem;
   width: 70%;
 }
 
-.main-img{
-  width: 70%;
-  margin: 1rem;
-}
-.main-contenedor img{
+.main-contenedor img {
   width: 100%;
 }
 
-.main-a a{
+.main-div-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* imagen del main */
+.main-img {
+  width: 70%;
+  margin: 1rem;
+}
+
+/* link del main */
+.main-a a {
   color: black;
   border: black 2px solid;
   border-radius: 10px;
   background-color: #e6e8e6;
   text-decoration: none;
-  font-size: 1.5rem ;
+  font-size: 1.5rem;
 }
-.main-a a:hover{
+.main-a a:hover {
   font-size: 2rem;
   background-color: #dda15e;
 }
-.main-img2{
+
+/* imagen 2 del main */
+.main-img2 {
   width: 70%;
   margin: 1rem;
 }
 
-
-.reproductor{
+/* Reproductor del main */
+.reproductor {
   width: 70%;
   margin: 1rem;
 }
-.main-contenedor div iframe{
+.reproductor iframe {
   width: 100%;
 }
 
-/* ----------------- FOOTER (CLASE FOOTER) -------------------- */
-.footer{
-  background-color: #e6e8e6;
-  border: black solid;
-  display:flex;
-  justify-content: space-around;
-  padding: .6rem;
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .main-a a {
+    font-size: 0.6rem;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-contenedor img {
+    width: 100%;
+    height: auto;
+  }
+  .main-a a {
+    font-size: 1.4rem;
+  }
+}
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-contenedor img {
+    height: auto;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) {
+  .main-contenedor h2 {
+    font-size: 3rem;
+  }
+  .main-contenedor img {
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .reproductor {
+    width: 100%;
+  }
+}
+/* ----------------------- Seccion Mi Música  --------------------- */
+.main-musica {
+  background-color: #5c677d;
+  padding: 1rem;
+}
+.main-musica h2 {
+  color: #dda15e;
+  text-align: center;
+  font-size: 2rem;
+  width: 35%;
 }
 
-.footer-h3{
+.main-musica h3 {
+  width: 80%;
+  text-align: center;
+  color: #dda15e;
+}
+
+/* seccion de todo el main */
+.main-sec-musica {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*  contenedor de la tapa del disco */
+.main-disco {
+  width: 70%;
+  margin-bottom: 30px;
+  justify-self: center;
+  align-self: center;
+}
+.main-disco img {
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+/* contenedor de canciones */
+.main-canciones {
+  width: 80%;
+}
+.main-canciones iframe {
+  width: 100%;
+  height: 100px;
+  margin: 0.4rem;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .main-musica h2 {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  .main-sec-musica {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+  .main-sec-musica h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+    width: 90%;
+  }
+  .main-disco img {
+    width: 90%;
+  }
+  .main-canciones {
+    width: 90%;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) {
+  .main-disco img {
+    width: 80%;
+  }
+  .main-canciones {
+    width: 80%;
+  }
+  .main-musica h2 {
+    font-size: 3rem;
+  }
+  .main-sec-musica {
+    margin-top: 15px;
+  }
+}
+/*----------------------- SECCION SOBRE MI  ------------------*/
+.main-about {
+  background-color: #5c677d;
+  padding: 1rem;
+}
+.main-about h2 {
   color: #dda15e;
   text-align: end;
-  width: 300px;
-}
-.footer-a{
-  margin-top: 50px;
-}
-.footer-a button{
-  margin-left: 15px;
-}
-.footer-a button:hover{
-  background-color: #dda15e;
-  font-size: x-large;
-}
-.footer-logo img{
-  width: 150px;
-  height: 150px;
+  font-size: 2rem;
+  width: 35%;
 }
 
+/*  seccion que contiene todo el contenido del main, menos el h2 */
+.main-about-sec {
+  display: grid;
+  padding: 1rem;
+}
+.main-about-sec h3 {
+  grid-column: span 2;
+  width: 50%;
+  color: #dda15e;
+  font-size: 2.5rem;
+}
 
+/* contiene imagenees separadas, para poder ocultar en la vista mobile */
+.main-about-img-left {
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+.main-about-img-left img {
+  width: 100%;
+  padding: 1rem;
+  object-fit: contain;
+}
+
+.main-about-img-right {
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+.main-about-img-right img {
+  width: 100%;
+  padding: 1rem;
+  object-fit: contain;
+}
+
+/* contenedor de los parrafos */
+.main-about-p {
+  align-self: center;
+}
+.main-about-p p {
+  font-size: 1.5vw;
+  color: azure;
+}
+
+/* tercer contenedor de imagenes, se encuentra al final antes del destacado */
+.main-img-jov {
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}
+.main-img-jov img {
+  width: 100%;
+}
+
+/* titulo destacado */
+.main-about-destacado h4 {
+  margin-top: 10px;
+  text-align: center;
+  padding: 0.3rem;
+  color: #dda15e;
+}
+
+.main-about-destacado ul li {
+  font-size: 1.7vw;
+  padding: 0.5rem;
+  color: azure;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .main-about h2 {
+    font-size: 2rem;
+    width: 80%;
+  }
+  .main-about-sec {
+    padding: 0.5rem;
+  }
+  .main-about-sec h3 {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  .main-about-p {
+    grid-column: span 2;
+    padding: 0.3rem;
+  }
+  .main-about-p p {
+    font-size: 0.8rem;
+  }
+  .main-about-destacado h4 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+  .main-about-destacado ul li {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .main-about-img-right {
+    display: none;
+  }
+  .main-img-jov {
+    display: none;
+  }
+  .main-about-img-left img {
+    width: 250px;
+    height: 250px;
+  }
+  .main-about-destacado ul li {
+    padding: 0.3rem;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) {
+  /* Sobre-Mi */
+  .main-about h2 {
+    font-size: 3rem;
+  }
+  .main-about-sect h3 {
+    font-size: 2rem;
+  }
+}
 /*--------------- SECCION VIDEOS ------------------*/
-.contenedor-videos{
+.contenedor-videos {
   text-align: start;
   display: grid;
-  grid-template-rows: (4,300px);
+  grid-template-rows: 4, 300px;
   justify-content: center;
   padding: 1rem;
   background-color: #5c677d;
 }
-.contenedor-videos h2{
+.contenedor-videos h2 {
   color: #dda15e;
   text-align: center;
   font-size: 2rem;
   width: 70%;
 }
-.contenedor-videos h3{
+
+.contenedor-videos h3 {
   color: #dda15e;
 }
-.main-video-principal{
+
+/*  El maun contiene un video principal (destacado) */
+.main-video-principal {
   width: 100%;
   max-width: 100%;
   grid-column: span 2;
   grid-row: span 1;
   text-align: center;
 }
-.main-video{
+.main-video-principal iframe {
+  border: black dashed 3px;
+  border-radius: 15px;
+}
+
+/* también contiene dos videos menos destacados */
+.main-video {
   text-align: center;
   width: 100%;
   max-width: 100%;
@@ -189,151 +595,90 @@
   padding: 1rem;
 }
 
-.main-video-principal iframe{
-  border: black dashed 3px;
-  border-radius: 15px;
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .contenedor-videos iframe {
+    width: 80%;
+  }
+  .main-video {
+    grid-column: span 2;
+  }
 }
-
-/*----------------------- SECCION SOBRE MI  ------------------*/
-.main-about{
-  background-color: #5c677d;
-  padding: 1rem;
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .contenedor-videos iframe {
+    width: 100%;
+  }
+  .main-video {
+    grid-column: span 2;
+  }
 }
-.main-about h2{
-  color: #dda15e;
-  text-align: center;
-  font-size: 2rem;
-  width: 35%;
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contenedor-videos iframe {
+    width: 100%;
+  }
+  .main-video {
+    grid-column: span 2;
+  }
+  .main-video iframe {
+    margin-left: 20px;
+  }
 }
-
-.main-about-sec{
-  display: grid;
-  padding:1rem;
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) {
+  .contenedor-videos h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .main-video iframe {
+    margin-left: 20px;
+  }
 }
-.main-about-sec h3{
-  grid-column: span 2;
-  text-align: center;
-  width: 50%;
-  color: #dda15e;
-}
-.main-about-img-left img{
-  width: 100%;
-  padding: 1rem;
-  object-fit: contain;
-  
-}
-.main-about-img-right img{
-  width: 100%;
-  padding: 1rem;
-  object-fit: contain;
-}
-.main-about-img-left{
-  width: 80%;
-  justify-self: center;
-  align-self: center;
-}
-.main-about-img-right{
-  width: 80%;
-  justify-self: center;
-  align-self: center;
-}
-.main-about-p{
-  align-self: center;
-}
-.main-about-p p{
-  font-size: 1.5vw;
-  color: azure;
-}
-.main-img-jov{
-  width: 80%;
-  justify-self: center;
-  align-self: center;
-}
-.main-img-jov img{
-  width: 100%;
-}
-
-.main-about-destacado h4{
-  margin-top: 10px;
-  text-align: center;
-  padding: .3rem;
-  color: #dda15e;
-}
-.main-about-destacado ul li{
-  font-size: 1.7vw;
-  padding: .5rem;
-  color: azure;
-}
-/* ----------------------- Seccion Mi Música  --------------------- */
-.main-musica{
-  background-color: #5c677d;
-  padding: 1rem;
-}
-.main-div-musica{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.main-musica h2{
-  color: #dda15e;
-  text-align: center;
-  font-size: 2rem;
-  width: 35%;
-}
-
-.main-musica h3{
-  width: 80%;
-  text-align: center;
-  color: #dda15e;
-}
-
-.main-disco{
-  width: 70%;
-  margin-bottom: 30px;
-  justify-self: center;
-  align-self: center;
-}
-.main-disco img{
-  width: 90%;
-  justify-self: center;
-  align-self: center;
-}
-.main-canciones{
-  width: 80%;
-}
-.main-canciones iframe{
-  width: 100%;
-  height: 100px;
-  margin: .4rem;
-}
-
 /* --------------------------------- Sección Contacto -------------------------- */
-.main-contacto{
+.main-contacto {
   background-color: #5c677d;
   padding: 2rem;
 }
-
-
-.main-contacto h2{
+.main-contacto h2 {
   color: #dda15e;
   text-align: center;
   font-size: 2rem;
   width: 35%;
 }
+
+/* Articulo que contiene todo el formulario */
 .main-formulario {
   max-width: 70%;
   margin: 0 auto;
 }
 
-.main-form h3{
+.main-form h3 {
   text-align: center;
   font-size: 2rem;
   color: #dda15e;
 }
+
 .form-group {
   margin-bottom: 20px;
+  display: flex;
 }
-.main-form-bot{
+
+.main-form-bot {
   justify-content: space-between;
+  display: flex;
+}
+
+.contact-img {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+.contact-img img {
+  width: 60%;
 }
 
 label {
@@ -344,327 +689,51 @@ label {
   text-align: center;
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="checkbox"] {
-  margin-top: 10px;
-  margin-left: 25px;
-}
-
-
-input[type="submit"],
-input[type="reset"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type="submit"]:hover,
-input[type="reset"]:hover{
-  background-color: aquamarine;
-  font-size: 1.5rem;
-}
-.main-form-bot{
-  display: flex;
-}
-.main-form-bot input{
-  border: #dda15e solid 2px;
-  width: 300px;
-}
-.form-group{
-  display: flex;
-}
-.contact-img{
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-}
-.contact-img img{
-  width: 60%;
-}
-
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
-  .foto-header{
-    display: none;
-  }
-  .cabecera-div h1{
-    margin-left: 0;
-  }
-  
-  .footer{
-    padding: .6rem;
-  }
-  .footer-logo{
-    display: none;
-  }
-  .footer-h3{
-    display: none;
-  }
-  .footer-a{
-    margin-top: 0;
-    margin-left: 20px;
-  }
-  .footer-a button{
-    margin: 5px 10px;
-  }
-  .main-a a{
-    font-size: .6rem;
-  }
-
-  /* ---------------------SECCION VIDEOS ------------------------------------------ */
-  
-  .contenedor-videos iframe{
-    width: 80%;
-  }
-  .main-video{
-    grid-column: span 2;
-  }
-  /* Sobre mi */
-  .main-about section{
-    padding: .5rem;
-  }
-
-  .main-about h2{
-    font-size: 1.2rem;
-  }
-  .main-about h3{
-    font-size: 1rem;
-  }
-  .main-about-p{
-  grid-column: span 2;
-  padding: .3rem;
-  }
-  .main-about-p p{
-    font-size: .8rem;
-  }
-  .main-about-destacado h4{
-    text-align: center;
-    font-size: 1rem;
-    padding: .3rem;
-  }
-  .main-about-destacado ul li{
-    font-size: .8rem;
-    padding: .5rem;
-  }
-
-  .main-about-img-right{
-    display: none;
-  }
-  .main-img-jov{
-    display: none;
-  }
-  .main-about-img-left img{
-    width: 250px;
-    height: 250px;
-  }
-  .main-about-destacado ul li{
-  padding: .3rem;
-  }
-  
-  /* ----------------- SECCION  Mi Música ---------------- */
-  .main-div-musica{
-    grid-template-columns: 1fr;
-    padding: .5rem;
-  }
-  .main-musica h2{
-    font-size: 1.4rem;
-    width: 100%;
-  }
-  .main-musica h3{
-    font-size: 1rem;
-    margin-top: 10px;
-    width: 90%;
-  }
-  .main-div-musica{
-    padding: .4rem;
-  }
-  .main-disco img{
-    width: 90%;
-  }
-  .main-canciones{
-    width: 90%;
-  }
-  /*  Contacto */
-  .main-form{
+  .main-contacto {
     padding: 1rem;
+  }
+  .main-contacto h2 {
+    font-size: 0.6rem;
+  }
+  .main-form {
+    padding: 1rem;
+  }
+  .main-form h3 {
+    font-size: 1.3rem;
   }
   .main-formulario {
     max-width: 100%;
-  }
-  .main-contacto{
-    padding: 1rem;
-  }
-  .main-form h2{
-    font-size: .6rem;
-  }
-  .main-form h3{
-    font-size: 1.3rem;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
-  .foto-header{
-    margin-left: 20px;
-  }
-  .main-contenedor img{
-    width: 100%;
-    height: auto;
-  }
-
-  .footer-h3{
-    display: none;
-  }
-  .main-a a{
-    font-size: 1.4rem;
-  }
-
-   /* --------------- VIDEOS ----------------------- */
-  .contenedor-videos iframe{
-    width: 100%;
-  }
-  .main-video{
-    grid-column: span 2;
-  }
-  /* Contacto */
   .main-formulario {
     max-width: 100%;
   }
-  .main-contacto{
+  .main-formulario-contacto {
     padding: 1rem;
   }
-  /* ----------- CONTACTO -------------- */
-  .main-form h3{
+  .main-formulario-form h3 {
     font-size: 1.5rem;
   }
-  
 }
-
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
-  .cabecera-div h1{
-    font-size: 2.5rem;
-    margin-left: 20px;
-  }
-  
-  .navbar-collapse{
-    text-align: center; 
-    font-size: 1rem;
-  }
-  
-  .navbar-brand{
-    display: none;
-  }
-  .main-contenedor img{
-    height: auto;
-  }
-  .footer-h3{
-    text-align: start;
-  }
-  
-  /* ----------------------- VIDEOS ------------------------ */
-  
-
-  .contenedor-videos iframe{
-    width: 100%;
-  }
-  .main-video{
-  grid-column: span 2;
-
-  }
-  .main-video iframe{
-    margin-left: 20px;
-  }
-
-}
-
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px){
-  .cabecera-div h1{
+@media (min-width: 1025px) {
+  .main-contacto h2 {
     font-size: 3.5rem;
   }
-  .navbar-collapse{
-    text-align: center; 
-    font-size: 1rem;
-  }
-  .navbar-collapse{
-    text-align: center; 
-    font-size: 1.2rem;
-  }
-  
-  .navbar-brand{
-    display: none;
-  }
-  .main-contenedor h2{
+  .main-about-destacado h3 {
     font-size: 3rem;
   }
-  .main-contenedor img{
-    height: auto;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-  
-  .reproductor{
-    width: 100%; 
-  }
-  /* ---------------------- Videos -------------------------------- */
-  .contenedor-videos h2{
-    text-align: center;
-    font-size: 3rem;
-  }
-  .main-video iframe{
-    margin-left: 20px;
-  }
-  /* Sobre-Mi */
-  .main-about h2{
-    font-size: 3rem;
-  }
-  .main-about h3{
-    font-size: 2rem;
-  }
-  /* Mí Música */
-  .main-disco img{
-    width: 80%;
-  }
-  .main-canciones{
-    width: 80%;
-  }
-
-  /* ----------------- MI MÚSICA ----------- */
-  .main-musica h2{
-    font-size: 3rem;
-  }
-  .main-div-musica{
-    margin-top: 15px;
-  }
-
-  /*  ---------- SOBRE MÍ -------------- */
-  .main-about h2{
-    font-size: 3rem;
-  }
-
-  /* --------- CONTACTO ------------ */
-  .main-contenedor h2{
-    font-size: 3rem;
-  }
-  .main-about-destacado h4{
-    font-size: 3rem;
+  .contact-img {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-
+/*# sourceMappingURL=styles.css.map */

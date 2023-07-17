@@ -1,0 +1,77 @@
+/* ----------------- FOOTER (CLASE FOOTER) -------------------- */
+.footer{
+  background-color: #e6e8e6;
+  border: black solid;
+  display:flex;
+  justify-content: space-around;
+  padding: .6rem;
+}
+.footer-h3{
+    color: #dda15e;
+  text-align: end;
+  width: 300px;
+  }
+
+.footer-a{
+  margin-top: 50px;
+
+  & button{
+    margin-left: 15px;
+
+    &:hover{
+      background-color: #dda15e;
+      font-size: x-large;
+    }
+  }
+}
+
+
+/* logo del footer */
+.footer-logo img{
+  width: 150px;
+  height: 150px;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px){
+  
+  .footer{
+    padding: .6rem;
+  }
+  .footer-logo{
+    display: none;
+  }
+  .footer-h3{
+    display: none;
+  }
+  .footer-a{
+    margin-top: 0;
+    margin-left: 20px;
+
+    & button{
+      margin: 5px 10px;
+
+      &:hover{
+        font-size:  initial;
+        background-color: initial;
+      }
+    }
+  }
+}
+
+/* ------ MEDIA QUERY ( MIN-481 / MAX-767) --------- */
+/* Media Query for low resolution Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){
+  .footer-h3{
+    display: none;
+  }
+}
+
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  .footer-h3{
+    text-align: start;
+  }
+
+}

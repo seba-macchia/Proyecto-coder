@@ -1,0 +1,109 @@
+/* --------------------------------- Sección Contacto -------------------------- */
+.main-contacto{
+  background-color: #5c677d;
+  padding: 2rem;
+
+  & h2{
+    color: #dda15e;
+    text-align: center;
+    font-size: 2rem;
+    width: 35%;
+  }
+}
+
+/* Articulo que contiene todo el formulario */
+.main-formulario {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.main-form h3{
+  text-align: center;
+  font-size: 2rem;
+  color: #dda15e;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+}
+.main-form-bot{
+  justify-content: space-between;
+  display: flex;
+
+
+}
+// imagen de la seccion contacto
+.contact-img{
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+
+  & img{
+    width: 60%;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px){
+  .main-contacto{
+    padding: 1rem;
+
+    & h2{
+      font-size: .6rem;
+    }
+  }
+  .main-form{
+    padding: 1rem;
+
+    & h3{
+      font-size: 1.3rem;
+    }
+  }
+  .main-formulario {
+    max-width: 100%;
+  }
+
+}
+
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){
+  .main-formulario {
+    max-width: 100%;
+  
+    &-contacto{
+      padding: 1rem;
+    }
+    &-form h3{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+  .main-contacto h2{
+    font-size: 3.5rem;
+  }
+  .main-about-destacado h3{
+    font-size: 3rem;
+  }
+  .contact-img{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

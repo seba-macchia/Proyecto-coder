@@ -1,0 +1,104 @@
+/* ----------------- MAIN (CLASE CONTENEDOR) -------------------------- */
+.main-contenedor{
+  background-color: #5c677d;
+
+  & h2{
+    color: #dda15e;
+    text-align: center;
+    font-size: 2rem;
+    width: 70%;
+  }
+}
+.main-contenedor img{
+  width: 100%;
+}
+  // Seccion que contiene el main (con las 2 imagenes, a y reproductor)
+.main-div-contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* imagen del main */
+.main-img{
+  width: 70%;
+  margin: 1rem;
+}
+/* link del main */
+
+.main-a a{
+  color: black;
+  border: black 2px solid;
+  border-radius: 10px;
+  background-color: #e6e8e6;
+  text-decoration: none;
+  font-size: 1.5rem ;
+
+  &:hover{
+    font-size: 2rem;
+    background-color: #dda15e;
+  }
+}
+/* imagen 2 del main */
+.main-img2{
+  width: 70%;
+  margin: 1rem;
+}
+
+
+/* Reproductor del main */
+.reproductor{
+  width: 70%;
+  margin: 1rem;
+
+  & iframe{
+    width: 100%;
+  }
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px){
+  .main-a a{
+    font-size: .6rem;
+  }
+}
+
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){
+  .main-contenedor img{
+    width: 100%;
+    height: auto;
+  }
+
+  .main-a a{
+    font-size: 1.4rem;
+  }
+
+}
+
+
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  .main-contenedor img{
+    height: auto;
+  }
+}
+
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+  .main-contenedor h2{
+    font-size: 3rem;
+  }
+  .main-contenedor img{
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  .reproductor{
+    width: 100%; 
+  }
+}

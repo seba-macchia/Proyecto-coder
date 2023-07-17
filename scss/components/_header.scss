@@ -1,0 +1,73 @@
+/* ------------ CLASE DEL HEADER (CABECERA) -------- */
+.cabecera{
+  position: sticky;
+  top: 0;
+  background-color:#e6e8e6;
+
+  &-div{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    & h1{
+      font-size: 1.5rem;
+      text-align: center;
+      align-self: center;
+      text-shadow: 1px 3px black;
+      color: #dda15e;
+    }
+  }
+}
+
+/* foto-header */
+
+.foto-header{
+  width: 176px;
+  height: 176px;
+}
+/*  logo-header */
+.logo{
+  width: 176px;
+  height: 176px;
+  margin-right: 5px;
+  
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .foto-header{
+    display: none;
+  }
+  .cabecera-div h1{
+    margin-left: 0;
+  }
+}
+
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .foto-header{
+    margin-left: 20px;
+  }
+
+}
+
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  .cabecera-div h1{
+    font-size: 2.5rem;
+    margin-left: 20px;
+  }
+
+}
+
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+  .cabecera-div h1{
+    font-size: 3.5rem;
+  }
+}

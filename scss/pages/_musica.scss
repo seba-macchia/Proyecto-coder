@@ -1,0 +1,95 @@
+/* ----------------------- Seccion Mi Música  --------------------- */
+.main-musica{
+  background-color: #5c677d;
+  padding: 1rem;
+
+  & h2{
+    color: #dda15e;
+  text-align: center;
+  font-size: 2rem;
+  width: 35%;
+  }
+}
+
+.main-musica h3{
+  width: 80%;
+  text-align: center;
+  color: #dda15e;
+}
+
+/* seccion de todo el main */
+.main-sec-musica{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/*  contenedor de la tapa del disco */
+.main-disco{
+  width: 70%;
+  margin-bottom: 30px;
+  justify-self: center;
+  align-self: center;
+
+  & img{
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+/* contenedor de canciones */
+.main-canciones{
+  width: 80%;
+
+  & iframe{
+    width: 100%;
+    height: 100px;
+    margin: .4rem;
+  }
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px){
+  .main-musica h2{
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .main-sec-musica{
+    grid-template-columns: 1fr;
+    padding: .5rem;
+
+    & h3{
+      font-size: 1rem;
+      margin-top: 10px;
+      width: 90%;
+    }
+  }
+  
+  .main-disco img{
+    width: 90%;
+  }
+  .main-canciones{
+    width: 90%;
+  }
+
+}
+
+/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+
+  .main-disco img{
+    width: 80%;
+  }
+  .main-canciones{
+    width: 80%;
+  }
+  
+  .main-musica h2{
+    font-size: 3rem;
+  }
+  .main-sec-musica{
+    margin-top: 15px;
+  }
+
+}
