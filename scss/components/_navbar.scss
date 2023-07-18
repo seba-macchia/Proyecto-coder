@@ -1,40 +1,41 @@
 /* Barra de navegacion */
 .container-fluid{
-  background-color:darkmagenta;
+  background-color: $c-fondo;
 }
 .navbar-collapse{
   text-align: center; 
   font-size: 1.3rem;
 
-  &-brand{
-    font-weight: bold;
-    color: #dda15e;
-    font-size: 1.6rem;
-    padding: 0;
-    margin: 0;
+.navbar-brand{
+  font-weight: bold;
+  color: $c-negro;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
 
-    &:hover, &:focus{
-      color: #dda15e;
-    }
+  &:hover, &:focus{
+    color: $c-letra;
+  }
 }
 }
 
 .nav-link{
-  color: white;
+  color: $c-negro;
   margin-left: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
 
   &:hover{
-    background-color: black;
-    color:bisque;
-    font-size: 1.5rem;
+    background-color: $c-negro;
+    color:$c-letra2;
     border-radius: 10px;
   }
 }
 
 .navbar-toggler{
-  background-color: cornflowerblue;
+  background-color: $c-fondo2;
   border-radius: 15px;
-  border: 1px solid navajowhite;
+  border: 1px solid $c-negro;
 }
 
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
@@ -46,9 +47,11 @@
     }
     .navbar-brand{
       display: none;
+    }
+    .nav-link{
+      font-size: 1rem;
+    }
   }
-}
-
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px){

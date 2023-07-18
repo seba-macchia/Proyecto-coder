@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* creo las variables a utilizar en las paginas*/
 /* SACO LOS ELEMENTOS QUE POR DEFECTO  QUE TRAE CSS Y AGREGO ALGUNAS COSAS QUE VAN PARA TODO EL HTML */
 * {
   padding: 0;
@@ -7,11 +8,44 @@
   font-family: cursive;
 }
 
+/* fondo de todos los main */
+main {
+  background: linear-gradient(#5c677d, #e6e8e6);
+  padding: 2rem;
+}
+
+/* botones de las redes*/
+.btn-redes {
+  margin-top: 50px;
+}
+.btn-redes button {
+  margin-left: 15px;
+}
+.btn-redes button:hover {
+  background-color: #5c677d;
+  color: #e6e8e6;
+  font-size: x-large;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  .btn-redes {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  .btn-redes button {
+    margin: 5px 10px;
+  }
+  .btn-redes button:hover {
+    font-size: initial;
+    background-color: initial;
+  }
+}
 /* ------------ CLASE DEL HEADER (CABECERA) -------- */
 .cabecera {
   position: sticky;
   top: 0;
-  background-color: #e6e8e6;
+  background: linear-gradient(#5c677d, black);
 }
 .cabecera-div {
   display: flex;
@@ -25,7 +59,7 @@
   text-align: center;
   align-self: center;
   text-shadow: 1px 3px black;
-  color: #dda15e;
+  color: azure;
 }
 
 /* foto-header */
@@ -78,7 +112,7 @@ select,
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 4px;
 }
 
@@ -92,8 +126,8 @@ input[type=reset] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: black;
+  color: #e6e8e6;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -101,50 +135,52 @@ input[type=reset] {
 
 input[type=submit]:hover,
 input[type=reset]:hover {
-  background-color: aquamarine;
+  background-color: #c7ac81;
   font-size: 1.5rem;
+  color: #e6e8e6;
 }
 
 .main-form-bot input {
-  border: #dda15e solid 2px;
+  border: #e6e8e6 solid 2px;
   width: 300px;
 }
 
 /* Barra de navegacion */
 .container-fluid {
-  background-color: darkmagenta;
+  background-color: #c7ac81;
 }
 
 .navbar-collapse {
   text-align: center;
   font-size: 1.3rem;
 }
-.navbar-collapse-brand {
+.navbar-collapse .navbar-brand {
   font-weight: bold;
-  color: #dda15e;
+  color: black;
   font-size: 1.6rem;
   padding: 0;
   margin: 0;
 }
-.navbar-collapse-brand:hover, .navbar-collapse-brand:focus {
-  color: #dda15e;
+.navbar-collapse .navbar-brand:hover, .navbar-collapse .navbar-brand:focus {
+  color: #e6e8e6;
 }
 
 .nav-link {
-  color: white;
+  color: black;
   margin-left: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 .nav-link:hover {
   background-color: black;
-  color: bisque;
-  font-size: 1.5rem;
+  color: azure;
   border-radius: 10px;
 }
 
 .navbar-toggler {
-  background-color: cornflowerblue;
+  background-color: #5c677d;
   border-radius: 15px;
-  border: 1px solid navajowhite;
+  border: 1px solid black;
 }
 
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
@@ -156,6 +192,9 @@ input[type=reset]:hover {
   }
   .navbar-brand {
     display: none;
+  }
+  .nav-link {
+    font-size: 1rem;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
@@ -171,7 +210,7 @@ input[type=reset]:hover {
 }
 /* ----------------- FOOTER (CLASE FOOTER) -------------------- */
 .footer {
-  background-color: #e6e8e6;
+  background: linear-gradient(black, #5c677d);
   border: black solid;
   display: flex;
   justify-content: space-around;
@@ -179,20 +218,9 @@ input[type=reset]:hover {
 }
 
 .footer-h3 {
-  color: #dda15e;
+  color: azure;
   text-align: end;
   width: 300px;
-}
-
-.footer-a {
-  margin-top: 50px;
-}
-.footer-a button {
-  margin-left: 15px;
-}
-.footer-a button:hover {
-  background-color: #dda15e;
-  font-size: x-large;
 }
 
 /* logo del footer */
@@ -212,17 +240,6 @@ input[type=reset]:hover {
   .footer-h3 {
     display: none;
   }
-  .footer-a {
-    margin-top: 0;
-    margin-left: 20px;
-  }
-  .footer-a button {
-    margin: 5px 10px;
-  }
-  .footer-a button:hover {
-    font-size: initial;
-    background-color: initial;
-  }
 }
 /* ------ MEDIA QUERY ( MIN-481 / MAX-767) --------- */
 /* Media Query for low resolution Tablets, Ipads */
@@ -239,11 +256,8 @@ input[type=reset]:hover {
   }
 }
 /* ----------------- MAIN (CLASE CONTENEDOR) -------------------------- */
-.main-contenedor {
-  background-color: #5c677d;
-}
 .main-contenedor h2 {
-  color: #dda15e;
+  color: azure;
   text-align: center;
   font-size: 2rem;
   width: 70%;
@@ -267,16 +281,17 @@ input[type=reset]:hover {
 
 /* link del main */
 .main-a a {
-  color: black;
+  color: azure;
   border: black 2px solid;
   border-radius: 10px;
-  background-color: #e6e8e6;
+  background-color: black;
   text-decoration: none;
   font-size: 1.5rem;
 }
 .main-a a:hover {
   font-size: 2rem;
-  background-color: #dda15e;
+  background-color: #c7ac81;
+  color: black;
 }
 
 /* imagen 2 del main */
@@ -334,12 +349,8 @@ input[type=reset]:hover {
   }
 }
 /* ----------------------- Seccion Mi Música  --------------------- */
-.main-musica {
-  background-color: #5c677d;
-  padding: 1rem;
-}
 .main-musica h2 {
-  color: #dda15e;
+  color: azure;
   text-align: center;
   font-size: 2rem;
   width: 35%;
@@ -348,7 +359,7 @@ input[type=reset]:hover {
 .main-musica h3 {
   width: 80%;
   text-align: center;
-  color: #dda15e;
+  color: azure;
 }
 
 /* seccion de todo el main */
@@ -419,12 +430,8 @@ input[type=reset]:hover {
   }
 }
 /*----------------------- SECCION SOBRE MI  ------------------*/
-.main-about {
-  background-color: #5c677d;
-  padding: 1rem;
-}
 .main-about h2 {
-  color: #dda15e;
+  color: #e6e8e6;
   text-align: end;
   font-size: 2rem;
   width: 35%;
@@ -438,7 +445,7 @@ input[type=reset]:hover {
 .main-about-sec h3 {
   grid-column: span 2;
   width: 50%;
-  color: #dda15e;
+  color: #e6e8e6;
   font-size: 2.5rem;
 }
 
@@ -465,13 +472,21 @@ input[type=reset]:hover {
   object-fit: contain;
 }
 
-/* contenedor de los parrafos */
-.main-about-p {
+/* contenedor de los parrafos en negro */
+.main-about-p-blanco {
   align-self: center;
 }
-.main-about-p p {
-  font-size: 1.5vw;
-  color: azure;
+.main-about-p-blanco p {
+  font-size: 1rem;
+  color: #e6e8e6;
+}
+
+.main-about-p-negro {
+  align-self: center;
+}
+.main-about-p-negro p {
+  font-size: 1rem;
+  color: black;
 }
 
 /* tercer contenedor de imagenes, se encuentra al final antes del destacado */
@@ -489,13 +504,13 @@ input[type=reset]:hover {
   margin-top: 10px;
   text-align: center;
   padding: 0.3rem;
-  color: #dda15e;
+  color: black;
 }
 
 .main-about-destacado ul li {
   font-size: 1.7vw;
   padding: 0.5rem;
-  color: azure;
+  color: black;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -511,40 +526,59 @@ input[type=reset]:hover {
     font-size: 1.5rem;
     width: 80%;
   }
-  .main-about-p {
+  .main-about-p-blanco {
     grid-column: span 2;
     padding: 0.3rem;
   }
-  .main-about-p p {
+  .main-about-p-blanco p {
     font-size: 0.8rem;
   }
-  .main-about-destacado h4 {
+  .main-about-p-blanco .main-about-p-negro {
+    grid-column: span 2;
+    padding: 0.3rem;
+  }
+  .main-about-p-blanco .main-about-p-negro p {
+    font-size: 0.8rem;
+  }
+  .main-about-p-blanco .main-about-destacado h4 {
     text-align: center;
     font-size: 1rem;
     padding: 0.3rem;
   }
-  .main-about-destacado ul li {
+  .main-about-p-blanco .main-about-destacado ul li {
     font-size: 0.8rem;
     padding: 0.5rem;
   }
-  .main-about-img-right {
+  .main-about-p-blanco .main-about-img-right {
     display: none;
   }
-  .main-img-jov {
+  .main-about-p-blanco .main-img-jov {
     display: none;
   }
-  .main-about-img-left img {
+  .main-about-p-blanco .main-about-img-left img {
     width: 250px;
     height: 250px;
   }
-  .main-about-destacado ul li {
+  .main-about-p-blanco .main-about-destacado ul li {
     padding: 0.3rem;
+  }
+}
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-about-sec h3 {
+    font-size: 2rem;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) {
-  /* Sobre-Mi */
+  .main-about-p-blanco p {
+    font-size: 1.3rem;
+  }
+  .main-about-p-negro p {
+    font-size: 1.3rem;
+  }
   .main-about h2 {
     font-size: 3rem;
   }
@@ -558,18 +592,16 @@ input[type=reset]:hover {
   display: grid;
   grid-template-rows: 4, 300px;
   justify-content: center;
-  padding: 1rem;
-  background-color: #5c677d;
 }
 .contenedor-videos h2 {
-  color: #dda15e;
+  color: #e6e8e6;
   text-align: center;
   font-size: 2rem;
   width: 70%;
 }
 
 .contenedor-videos h3 {
-  color: #dda15e;
+  color: #e6e8e6;
 }
 
 /*  El maun contiene un video principal (destacado) */
@@ -639,12 +671,8 @@ input[type=reset]:hover {
   }
 }
 /* --------------------------------- Sección Contacto -------------------------- */
-.main-contacto {
-  background-color: #5c677d;
-  padding: 2rem;
-}
 .main-contacto h2 {
-  color: #dda15e;
+  color: #e6e8e6;
   text-align: center;
   font-size: 2rem;
   width: 35%;
@@ -659,7 +687,7 @@ input[type=reset]:hover {
 .main-form h3 {
   text-align: center;
   font-size: 2rem;
-  color: #dda15e;
+  color: #e6e8e6;
 }
 
 .form-group {

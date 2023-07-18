@@ -1,3 +1,20 @@
+/* creo las variables a utilizar en las paginas*/
+//color de fondo 1
+$c-fondo:#c7ac81;
+//color de fondo 2
+$c-fondo2: #5c677d;
+//color fondo 3
+$c-fondo3: #e6e8e6;
+// color de letra principal
+$c-letra: #e6e8e6;
+//color letra 2
+$c-letra2: azure;
+//color negro
+$c-negro: black;
+
+
+
+
 /* SACO LOS ELEMENTOS QUE POR DEFECTO  QUE TRAE CSS Y AGREGO ALGUNAS COSAS QUE VAN PARA TODO EL HTML */
 *{
   padding: 0;
@@ -7,4 +24,9 @@
   
 }
 
+/* fondo de todos los main */
+main{
+  background: linear-gradient($c-fondo2,$c-fondo3);
+  padding: 2rem;
+}
 

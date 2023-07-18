@@ -6,7 +6,7 @@ select,
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid $c-negro;
   border-radius: 4px;
 }
 
@@ -21,19 +21,20 @@ input[type="reset"] {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: $c-negro;
+  color: $c-letra;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 input[type="submit"]:hover,
 input[type="reset"]:hover{
-  background-color: aquamarine;
+  background-color: $c-fondo;
   font-size: 1.5rem;
+  color: $c-letra;
 }
 
 .main-form-bot input{
-  border: #dda15e solid 2px;
+  border: $c-letra solid 2px;
   width: 300px;
 }

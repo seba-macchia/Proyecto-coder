@@ -1,14 +1,11 @@
 /* ----------------- MAIN (CLASE CONTENEDOR) -------------------------- */
-.main-contenedor{
-  background-color: #5c677d;
-
-  & h2{
-    color: #dda15e;
-    text-align: center;
-    font-size: 2rem;
-    width: 70%;
-  }
+.main-contenedor h2{
+  color: $c-letra2;
+  text-align: center;
+  font-size: 2rem;
+  width: 70%;
 }
+
 .main-contenedor img{
   width: 100%;
 }
@@ -27,16 +24,17 @@
 /* link del main */
 
 .main-a a{
-  color: black;
-  border: black 2px solid;
+  color: $c-letra2;
+  border: $c-negro 2px solid;
   border-radius: 10px;
-  background-color: #e6e8e6;
+  background-color: $c-negro;
   text-decoration: none;
   font-size: 1.5rem ;
 
   &:hover{
     font-size: 2rem;
-    background-color: #dda15e;
+    background-color: $c-fondo;
+    color: $c-negro;
   }
 }
 /* imagen 2 del main */

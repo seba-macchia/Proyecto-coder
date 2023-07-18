@@ -4,11 +4,9 @@
   display: grid;
   grid-template-rows: (4,300px);
   justify-content: center;
-  padding: 1rem;
-  background-color: #5c677d;
 
   & h2{
-    color: #dda15e;
+    color: $c-letra;
     text-align: center;
     font-size: 2rem;
     width: 70%;
@@ -17,7 +15,7 @@
 
 // h3
 .contenedor-videos h3{
-  color: #dda15e;
+  color: $c-letra;
 }
 
 /*  El maun contiene un video principal (destacado) */
@@ -29,7 +27,7 @@
   text-align: center;
 
   & iframe{
-    border: black dashed 3px;
+    border: $c-negro dashed 3px;
     border-radius: 15px;
   }
 }

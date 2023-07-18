@@ -1,14 +1,9 @@
 /* --------------------------------- Sección Contacto -------------------------- */
-.main-contacto{
-  background-color: #5c677d;
-  padding: 2rem;
-
-  & h2{
-    color: #dda15e;
-    text-align: center;
-    font-size: 2rem;
-    width: 35%;
-  }
+.main-contacto h2{
+  color: $c-letra;
+  text-align: center;
+  font-size: 2rem;
+  width: 35%;
 }
 
 /* Articulo que contiene todo el formulario */
@@ -20,7 +15,7 @@
 .main-form h3{
   text-align: center;
   font-size: 2rem;
-  color: #dda15e;
+  color: $c-letra;
 }
 
 .form-group {

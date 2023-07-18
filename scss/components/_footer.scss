@@ -1,29 +1,16 @@
 /* ----------------- FOOTER (CLASE FOOTER) -------------------- */
 .footer{
-  background-color: #e6e8e6;
-  border: black solid;
+  background: linear-gradient($c-negro,$c-fondo2);
+  border: $c-negro solid;
   display:flex;
   justify-content: space-around;
   padding: .6rem;
 }
 .footer-h3{
-    color: #dda15e;
+  color: $c-letra2;
   text-align: end;
   width: 300px;
   }
-
-.footer-a{
-  margin-top: 50px;
-
-  & button{
-    margin-left: 15px;
-
-    &:hover{
-      background-color: #dda15e;
-      font-size: x-large;
-    }
-  }
-}
 
 
 /* logo del footer */
@@ -44,19 +31,7 @@
   .footer-h3{
     display: none;
   }
-  .footer-a{
-    margin-top: 0;
-    margin-left: 20px;
-
-    & button{
-      margin: 5px 10px;
-
-      &:hover{
-        font-size:  initial;
-        background-color: initial;
-      }
-    }
-  }
+  
 }
 
 /* ------ MEDIA QUERY ( MIN-481 / MAX-767) --------- */
