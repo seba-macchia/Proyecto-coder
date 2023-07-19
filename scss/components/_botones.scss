@@ -8,7 +8,8 @@
     &:hover{
       background-color: $c-fondo2;
       color: $c-letra;
-      font-size: x-large;
+      transform: scale(1.8);
+      transition: transform 0.3s ease-in-out;
     }
   }
 }
@@ -26,6 +27,8 @@
       &:hover{
         font-size:  initial;
         background-color: initial;
+        transform: none;
+        transition: none;
       }
     }
   }

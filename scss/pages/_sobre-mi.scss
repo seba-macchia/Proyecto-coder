@@ -21,9 +21,7 @@
 
 /* contiene imagenees separadas, para poder ocultar en la vista mobile */
 .main-about-img-left{
-  width: 80%;
-  justify-self: center;
-  align-self: center;
+  @include centrar;
 
   & img{
     width: 100%;
@@ -34,9 +32,7 @@
 
 // contenedor de imagenes 2
 .main-about-img-right{
-  width: 80%;
-  justify-self: center;
-  align-self: center;
+  @include centrar;
 
   & img{
     width: 100%;
@@ -65,9 +61,7 @@
 
 /* tercer contenedor de imagenes, se encuentra al final antes del destacado */
 .main-img-jov{
-  width: 80%;
-  justify-self: center;
-  align-self: center;
+  @include centrar;
 
   & img{
     width: 100%;
@@ -90,6 +84,34 @@
 }
 
 
+/* Animación de los párrafos e imágenes dentro de "main-about" */
+.main-about-p-blanco,
+.main-about-p-negro,
+.main-about-img-left,
+.main-about-img-right {
+  opacity: 0;
+  animation: ingreso 1s ease-in forwards;
+}
+
+@keyframes ingreso {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animación de destacar imágenes */
+.main-about-img-left img,
+.main-about-img-right img,
+.main-img-jov img {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-about-img-left img:hover,
+.main-about-img-right img:hover,
+.main-img-jov img:hover {
+  transform: scale(1.2);
+}
+
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
   .main-about h2{
@@ -109,10 +131,11 @@
   .main-about-p-blanco{
     grid-column: span 2;
     padding: .3rem;
-    
+
     & p{
       font-size: .8rem;
     }
+  }
   // contenedor de letras en negro
   .main-about-p-negro{
     grid-column: span 2;
@@ -122,35 +145,41 @@
       font-size: .8rem;
     }
   }
+    // titulo de las menciones destacadas
+    .main-about-destacado h4{
+      text-align: center;
+      font-size: 1.5rem;
+      padding: .3rem;
+    }
+    // lista de menciones destacadas
+    .main-about-destacado ul li{
+      font-size: .9rem;
+      padding: .5rem;
+    }
 
-  .main-about-destacado h4{
-    text-align: center;
-    font-size: 1rem;
+    // oculto una imagen
+    .main-about-img-right img{
+      display: none;
+    }
+    // oculto otra imagen
+    .main-img-jov img{
+      display: none;
+    }
+    .main-about-img-left img{
+      width: 250px;
+      height: 250px;
+    }
+    .main-about-destacado ul li{
     padding: .3rem;
-  }
-  .main-about-destacado ul li{
-    font-size: .8rem;
-    padding: .5rem;
-  }
-
-  .main-about-img-right{
-    display: none;
-  }
-  .main-img-jov{
-    display: none;
-  }
-  .main-about-img-left img{
-    width: 250px;
-    height: 250px;
-  }
-  .main-about-destacado ul li{
-  padding: .3rem;
-  }
-
-  }
+    }
+    // le saco en la version mobile el hover de la imagen
+    .main-about-img-left img:hover,
+    .main-about-img-right img:hover,
+    .main-img-jov img:hover {
+    transform: none;
 }
 
-
+}
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px){

@@ -1,9 +1,7 @@
 /*--------------- SECCION VIDEOS ------------------*/
 .contenedor-videos{
   text-align: start;
-  display: grid;
-  grid-template-rows: (4,300px);
-  justify-content: center;
+  @include contenedor-grid;
 
   & h2{
     color: $c-letra;
@@ -20,11 +18,7 @@
 
 /*  El maun contiene un video principal (destacado) */
 .main-video-principal{
-  width: 100%;
-  max-width: 100%;
-  grid-column: span 2;
-  grid-row: span 1;
-  text-align: center;
+  @include contenedor-video(span 2);
 
   & iframe{
     border: $c-negro dashed 3px;
@@ -34,14 +28,27 @@
 
 /* también contiene dos videos menos destacados */
 .main-video{
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  grid-column: span 1;
-  grid-row: span 1;
+  @include contenedor-video (span 1);
   padding: 1rem;
 }
+/* Realizo dos animaciones de parpadeo sobre el video destacado */
 
+@keyframes titilar {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.main-video-principal iframe{
+  border: 3px dashed transparent;
+  animation: titilar 1s infinite;
+}
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
   .contenedor-videos iframe{
@@ -72,9 +79,6 @@
   }
   .main-video{
   grid-column: span 2;
-    & iframe{
-      margin-left: 20px;
-    }
   }
 
 }

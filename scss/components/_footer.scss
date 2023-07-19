@@ -2,9 +2,8 @@
 .footer{
   background: linear-gradient($c-negro,$c-fondo2);
   border: $c-negro solid;
-  display:flex;
-  justify-content: space-around;
   padding: .6rem;
+  @include contenedor-columna(space-between, row);
 }
 .footer-h3{
   color: $c-letra2;

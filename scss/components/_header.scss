@@ -1,8 +1,6 @@
 /* ------------ CLASE DEL HEADER (CABECERA) -------- */
 .cabecera{
-  position: sticky;
-  top: 0;
-  background: linear-gradient($c-fondo2,$c-negro);
+  background: linear-gradient($c-negro,$c-fondo2,$c-negro);
 
   &-div{
     display: flex;
@@ -33,6 +31,19 @@
   height: 176px;
   margin-right: 5px;
   
+}
+
+/* Animación del encabezado */
+.foto-header,
+h1,
+.logo {
+  opacity: 0;
+  animation: fade-in-animation 1s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */

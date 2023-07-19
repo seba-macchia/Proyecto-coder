@@ -9,13 +9,12 @@
 .main-musica h3{
   width: 80%;
   text-align: center;
-  color: $c-letra2Q;
+  color: $c-letra2;
 }
 
 /* seccion de todo el main */
 .main-sec-musica{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  @include contenedor-grid;
 }
 /*  contenedor de la tapa del disco */
 .main-disco{
@@ -41,6 +40,17 @@
     margin: .4rem;
   }
 }
+
+/* animaciones sobre los titulos h3*/
+@keyframes trasladar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(60px);}
+}
+
+.trasladar-x {
+  animation: trasladar 0.3s ease-in-out infinite alternate;
+}
+
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){

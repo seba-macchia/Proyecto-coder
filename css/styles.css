@@ -14,6 +14,23 @@ main {
   padding: 2rem;
 }
 
+/* Animación de todos los h2 */
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.parpadeante {
+  animation: parpadeo 1.5s infinite;
+}
+
+/* creando diferentes mixin para utilizar en las páginas */
 /* botones de las redes*/
 .btn-redes {
   margin-top: 50px;
@@ -24,7 +41,8 @@ main {
 .btn-redes button:hover {
   background-color: #5c677d;
   color: #e6e8e6;
-  font-size: x-large;
+  transform: scale(1.8);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -39,13 +57,13 @@ main {
   .btn-redes button:hover {
     font-size: initial;
     background-color: initial;
+    transform: none;
+    transition: none;
   }
 }
 /* ------------ CLASE DEL HEADER (CABECERA) -------- */
 .cabecera {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(#5c677d, black);
+  background: linear-gradient(black, #5c677d, black);
 }
 .cabecera-div {
   display: flex;
@@ -75,6 +93,22 @@ main {
   margin-right: 5px;
 }
 
+/* Animación del encabezado */
+.foto-header,
+h1,
+.logo {
+  opacity: 0;
+  animation: fade-in-animation 1s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .foto-header {
@@ -183,6 +217,31 @@ input[type=reset]:hover {
   border: 1px solid black;
 }
 
+/* animacion de ingreso a la pagina en el navbar */
+.navbar-collapse {
+  transform: translateY(-100%);
+  animation: slide-animation 1s ease-in forwards;
+}
+
+@keyframes slide-animation {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* -------------- MEDIA QUERY (MAX: 480px) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (max-width: 480px) {
+  .navbar-collapse {
+    animation: none;
+    transform: none;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+}
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -212,9 +271,11 @@ input[type=reset]:hover {
 .footer {
   background: linear-gradient(black, #5c677d);
   border: black solid;
-  display: flex;
-  justify-content: space-around;
   padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .footer-h3 {
@@ -269,6 +330,7 @@ input[type=reset]:hover {
 
 .main-div-contenedor {
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
 }
@@ -280,16 +342,20 @@ input[type=reset]:hover {
 }
 
 /* link del main */
+.main-a {
+  justify-self: center;
+  display: flex;
+}
 .main-a a {
   color: azure;
-  border: black 2px solid;
+  border: #e6e8e6 4px solid;
   border-radius: 10px;
   background-color: black;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .main-a a:hover {
-  font-size: 2rem;
+  font-size: 1.6rem;
   background-color: #c7ac81;
   color: black;
 }
@@ -309,10 +375,34 @@ input[type=reset]:hover {
   width: 100%;
 }
 
+/* animacion sobre la etiqueta a de Mí Música */
+.trasladar {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text-hover {
+  position: relative;
+  display: inline-block;
+  animation: trasladar-izquierda 5s infinite;
+}
+
+@keyframes trasladar-izquierda {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .main-a a {
-    font-size: 0.6rem;
+    font-size: 1rem;
+  }
+  .main-a a:hover {
+    display: none;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
@@ -365,6 +455,7 @@ input[type=reset]:hover {
 /* seccion de todo el main */
 .main-sec-musica {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -389,6 +480,19 @@ input[type=reset]:hover {
   width: 100%;
   height: 100px;
   margin: 0.4rem;
+}
+
+/* animaciones sobre los titulos h3*/
+@keyframes trasladar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(60px);
+  }
+}
+.trasladar-x {
+  animation: trasladar 0.3s ease-in-out infinite alternate;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -513,6 +617,37 @@ input[type=reset]:hover {
   color: black;
 }
 
+/* Animación de los párrafos e imágenes dentro de "main-about" */
+.main-about-p-blanco,
+.main-about-p-negro,
+.main-about-img-left,
+.main-about-img-right {
+  opacity: 0;
+  animation: ingreso 1s ease-in forwards;
+}
+
+@keyframes ingreso {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Animación de destacar imágenes */
+.main-about-img-left img,
+.main-about-img-right img,
+.main-img-jov img {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-about-img-left img:hover,
+.main-about-img-right img:hover,
+.main-img-jov img:hover {
+  transform: scale(1.2);
+}
+
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .main-about h2 {
@@ -533,34 +668,39 @@ input[type=reset]:hover {
   .main-about-p-blanco p {
     font-size: 0.8rem;
   }
-  .main-about-p-blanco .main-about-p-negro {
+  .main-about-p-negro {
     grid-column: span 2;
     padding: 0.3rem;
   }
-  .main-about-p-blanco .main-about-p-negro p {
+  .main-about-p-negro p {
     font-size: 0.8rem;
   }
-  .main-about-p-blanco .main-about-destacado h4 {
+  .main-about-destacado h4 {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0.3rem;
   }
-  .main-about-p-blanco .main-about-destacado ul li {
-    font-size: 0.8rem;
+  .main-about-destacado ul li {
+    font-size: 0.9rem;
     padding: 0.5rem;
   }
-  .main-about-p-blanco .main-about-img-right {
+  .main-about-img-right img {
     display: none;
   }
-  .main-about-p-blanco .main-img-jov {
+  .main-img-jov img {
     display: none;
   }
-  .main-about-p-blanco .main-about-img-left img {
+  .main-about-img-left img {
     width: 250px;
     height: 250px;
   }
-  .main-about-p-blanco .main-about-destacado ul li {
+  .main-about-destacado ul li {
     padding: 0.3rem;
+  }
+  .main-about-img-left img:hover,
+  .main-about-img-right img:hover,
+  .main-img-jov img:hover {
+    transform: none;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
@@ -590,8 +730,8 @@ input[type=reset]:hover {
 .contenedor-videos {
   text-align: start;
   display: grid;
-  grid-template-rows: 4, 300px;
   justify-content: center;
+  grid-template-columns: 1fr 1fr;
 }
 .contenedor-videos h2 {
   color: #e6e8e6;
@@ -619,12 +759,29 @@ input[type=reset]:hover {
 
 /* también contiene dos videos menos destacados */
 .main-video {
-  text-align: center;
   width: 100%;
   max-width: 100%;
   grid-column: span 1;
   grid-row: span 1;
+  text-align: center;
   padding: 1rem;
+}
+
+/* Realizo dos animaciones de parpadeo sobre el video destacado */
+@keyframes titilar {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+.main-video-principal iframe {
+  border: 3px dashed transparent;
+  animation: titilar 1s infinite;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -654,9 +811,6 @@ input[type=reset]:hover {
   }
   .main-video {
     grid-column: span 2;
-  }
-  .main-video iframe {
-    margin-left: 20px;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
@@ -717,13 +871,37 @@ label {
   text-align: center;
 }
 
+/* animación de la página de contacto */
+.contact-img img {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.main-contacto .contact-img img {
+  animation: destacar 3s ease forwards;
+}
+
+@keyframes destacar {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .main-contacto {
     padding: 1rem;
   }
   .main-contacto h2 {
-    font-size: 0.6rem;
+    font-size: 1.6rem;
   }
   .main-form {
     padding: 1rem;

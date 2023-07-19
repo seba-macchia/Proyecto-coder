@@ -38,12 +38,36 @@
   border: 1px solid $c-negro;
 }
 
+/* animacion de ingreso a la pagina en el navbar */
+.navbar-collapse {
+  transform: translateY(-100%);
+  animation: slide-animation 1s ease-in forwards;
+}
+
+@keyframes slide-animation {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* -------------- MEDIA QUERY (MAX: 480px) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (max-width: 480px){
+  .navbar-collapse{
+    animation: none;
+    transform: none;
+  }
+  .nav-link{
+    font-size: 1rem;
+  }
+}
+
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px){
   .navbar-collapse{
     text-align: center; 
     font-size: 1rem;
+
     }
     .navbar-brand{
       display: none;

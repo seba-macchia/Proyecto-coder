@@ -11,9 +11,7 @@
 }
   // Seccion que contiene el main (con las 2 imagenes, a y reproductor)
 .main-div-contenedor{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include contenedor-columna(space-around, column);
 }
 
 /* imagen del main */
@@ -22,19 +20,24 @@
   margin: 1rem;
 }
 /* link del main */
+.main-a{
+  justify-self: center;
+  display: flex;
 
-.main-a a{
-  color: $c-letra2;
-  border: $c-negro 2px solid;
-  border-radius: 10px;
-  background-color: $c-negro;
-  text-decoration: none;
-  font-size: 1.5rem ;
+  & a{
+    color: $c-letra2;
+    border: $c-letra 4px solid;
+    border-radius: 10px;
+    background-color: $c-negro;
+    text-decoration: none;
+    font-size: 1.2rem ;
+
 
   &:hover{
-    font-size: 2rem;
-    background-color: $c-fondo;
-    color: $c-negro;
+      font-size: 1.6rem;
+      background-color: $c-fondo;
+      color: $c-negro;
+    }
   }
 }
 /* imagen 2 del main */
@@ -54,10 +57,35 @@
   }
 }
 
+/* animacion sobre la etiqueta a de Mí Música */
+.trasladar {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text-hover {
+  position: relative;
+  display: inline-block;
+  animation: trasladar-izquierda 5s infinite;
+}
+
+@keyframes trasladar-izquierda {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
   .main-a a{
-    font-size: .6rem;
+    font-size: 1rem;
+  }
+  .main-a a:hover{
+    display: none;
   }
 }
 

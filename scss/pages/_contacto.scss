@@ -25,8 +25,6 @@
 .main-form-bot{
   justify-content: space-between;
   display: flex;
-
-
 }
 // imagen de la seccion contacto
 .contact-img{
@@ -47,13 +45,41 @@ label {
   text-align: center;
 }
 
+/* animación de la página de contacto */
+.contact-img img {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.main-contacto .contact-img img {
+  animation: destacar 3s ease forwards;
+}
+
+@keyframes destacar {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
   .main-contacto{
     padding: 1rem;
 
     & h2{
-      font-size: .6rem;
+      font-size: 1.6rem;
     }
   }
   .main-form{
