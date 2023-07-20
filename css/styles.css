@@ -492,7 +492,7 @@ input[type=reset]:hover {
   }
 }
 .trasladar-x {
-  animation: trasladar 0.5s ease-in-out infinite;
+  animation: trasladar 2s ease-in-out infinite;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -681,7 +681,7 @@ input[type=reset]:hover {
     padding: 0.3rem;
   }
   .main-about-destacado ul li {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 0.5rem;
   }
   .main-about-img-right img {
@@ -724,6 +724,9 @@ input[type=reset]:hover {
   }
   .main-about-sect h3 {
     font-size: 2rem;
+  }
+  .main-about-destacado ul li {
+    font-size: 1.3rem;
   }
 }
 /*--------------- SECCION VIDEOS ------------------*/
