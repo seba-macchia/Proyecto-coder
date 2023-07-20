@@ -44,11 +44,11 @@
 /* animaciones sobre los titulos h3*/
 @keyframes trasladar {
   0% { transform: translateX(0); }
-  100% { transform: translateX(60px);}
+  100% { transform: translateX(100px);}
 }
 
 .trasladar-x {
-  animation: trasladar 0.3s ease-in-out infinite alternate;
+  animation: trasladar .5s ease-in-out infinite;
 }
 
 
