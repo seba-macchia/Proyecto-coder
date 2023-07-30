@@ -55,15 +55,12 @@ main {
     margin: 5px 10px;
   }
   .btn-redes button:hover {
-    font-size: initial;
-    background-color: initial;
-    transform: none;
-    transition: none;
+    pointer-events: none;
   }
 }
 /* ------------ CLASE DEL HEADER (CABECERA) -------- */
 .cabecera {
-  background: linear-gradient(black, #5c677d, black);
+  background: #e8e8e8;
 }
 .cabecera-div {
   display: flex;
@@ -73,11 +70,11 @@ main {
   padding: 0.5rem;
 }
 .cabecera-div h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-align: center;
   align-self: center;
   text-shadow: 1px 3px black;
-  color: azure;
+  color: #c39d5f;
 }
 
 /* foto-header */
@@ -117,34 +114,24 @@ h1,
   .cabecera-div h1 {
     margin-left: 0;
   }
-}
-/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .foto-header {
-    margin-left: 20px;
-  }
-}
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
   .cabecera-div h1 {
-    font-size: 2.5rem;
-    margin-left: 20px;
+    font-size: 1.8rem;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) {
+@media (min-width: 481px) and (max-width: 767px) {
   .cabecera-div h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 3px black;
   }
 }
 input[type=text],
 input[type=email],
 select,
 textarea {
-  width: 100%;
+  max-width: 90%;
+  min-width: 80%;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
@@ -158,7 +145,7 @@ input[type=checkbox] {
 input[type=submit],
 input[type=reset] {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   background-color: black;
   color: #e6e8e6;
@@ -169,7 +156,7 @@ input[type=reset] {
 
 input[type=submit]:hover,
 input[type=reset]:hover {
-  background-color: #c7ac81;
+  background-color: #c39d5f;
   font-size: 1.5rem;
   color: #e6e8e6;
 }
@@ -179,23 +166,34 @@ input[type=reset]:hover {
   width: 300px;
 }
 
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px) {
+  input[type=submit]:hover,
+  input[type=reset]:hover {
+    font-size: initial;
+    background-color: initial;
+    pointer-events: none;
+  }
+}
 /* Barra de navegacion */
 .container-fluid {
-  background-color: #c7ac81;
+  background-color: #c39d5f;
 }
 
 .navbar-collapse {
   text-align: center;
   font-size: 1.3rem;
 }
-.navbar-collapse .navbar-brand {
+
+.navbar-brand {
   font-weight: bold;
   color: black;
   font-size: 1.6rem;
   padding: 0;
   margin: 0;
 }
-.navbar-collapse .navbar-brand:hover, .navbar-collapse .navbar-brand:focus {
+
+.navbar-brand:hover, .navbar-brand:focus {
   color: #e6e8e6;
 }
 
@@ -241,6 +239,9 @@ input[type=reset]:hover {
   .nav-link {
     font-size: 1rem;
   }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
 }
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
@@ -249,10 +250,10 @@ input[type=reset]:hover {
     text-align: center;
     font-size: 1rem;
   }
-  .navbar-brand {
+  .navbar-collapse-brand {
     display: none;
   }
-  .nav-link {
+  .navbar-collapse .nav-link {
     font-size: 1rem;
   }
 }
@@ -263,7 +264,7 @@ input[type=reset]:hover {
     text-align: center;
     font-size: 1rem;
   }
-  .navbar-brand {
+  .navbar-collapse-brand {
     display: none;
   }
 }
@@ -279,7 +280,7 @@ input[type=reset]:hover {
 }
 
 .footer-h3 {
-  color: azure;
+  color: #c39d5f;
   text-align: end;
   width: 300px;
 }
@@ -288,6 +289,8 @@ input[type=reset]:hover {
 .footer-logo img {
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  border-radius: 13px;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -326,6 +329,8 @@ input[type=reset]:hover {
 
 .main-contenedor img {
   width: 100%;
+  object-fit: cover;
+  border-radius: 13px;
 }
 
 .main-div-contenedor {
@@ -355,8 +360,8 @@ input[type=reset]:hover {
   font-size: 1.2rem;
 }
 .main-a a:hover {
-  font-size: 1.6rem;
-  background-color: #c7ac81;
+  font-size: 1.7rem;
+  background-color: #c39d5f;
   color: black;
 }
 
@@ -399,7 +404,7 @@ input[type=reset]:hover {
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .main-a a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .main-a a:hover {
     display: none;
@@ -411,9 +416,6 @@ input[type=reset]:hover {
   .main-contenedor img {
     width: 100%;
     height: auto;
-  }
-  .main-a a {
-    font-size: 1.4rem;
   }
 }
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
@@ -470,6 +472,8 @@ input[type=reset]:hover {
   width: 90%;
   justify-self: center;
   align-self: center;
+  object-fit: cover;
+  border-radius: 13px;
 }
 
 /* contenedor de canciones */
@@ -549,11 +553,11 @@ input[type=reset]:hover {
 .main-about-sec h3 {
   grid-column: span 2;
   width: 50%;
-  color: #e6e8e6;
+  color: #c39d5f;
   font-size: 2.5rem;
 }
 
-/* contiene imagenees separadas, para poder ocultar en la vista mobile */
+/* contiene imagenes separadas, para poder ocultar en la vista mobile */
 .main-about-img-left {
   width: 80%;
   justify-self: center;
@@ -562,7 +566,8 @@ input[type=reset]:hover {
 .main-about-img-left img {
   width: 100%;
   padding: 1rem;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .main-about-img-right {
@@ -573,7 +578,8 @@ input[type=reset]:hover {
 .main-about-img-right img {
   width: 100%;
   padding: 1rem;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 /* contenedor de los parrafos en negro */
@@ -601,6 +607,8 @@ input[type=reset]:hover {
 }
 .main-img-jov img {
   width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 /* titulo destacado */
@@ -651,7 +659,7 @@ input[type=reset]:hover {
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .main-about h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 80%;
   }
   .main-about-sec {
@@ -679,6 +687,7 @@ input[type=reset]:hover {
     text-align: center;
     font-size: 1.5rem;
     padding: 0.3rem;
+    color: #c39d5f;
   }
   .main-about-destacado ul li {
     font-size: 0.8rem;
@@ -701,6 +710,7 @@ input[type=reset]:hover {
   .main-about-img-right img:hover,
   .main-img-jov img:hover {
     transform: none;
+    pointer-events: none;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
@@ -750,6 +760,7 @@ input[type=reset]:hover {
 
 .contenedor-videos h3 {
   color: #e6e8e6;
+  font-size: 2.5rem;
 }
 
 /*  El maun contiene un video principal (destacado) */
@@ -761,7 +772,8 @@ input[type=reset]:hover {
   text-align: center;
 }
 .main-video-principal iframe {
-  border: black dashed 3px;
+  border: 3px dashed transparent;
+  animation: titilar 1s infinite;
   border-radius: 15px;
 }
 
@@ -787,9 +799,8 @@ input[type=reset]:hover {
     border-color: transparent;
   }
 }
-.main-video-principal iframe {
-  border: 3px dashed transparent;
-  animation: titilar 1s infinite;
+.main-video iframe {
+  border-radius: 15px;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
@@ -799,6 +810,10 @@ input[type=reset]:hover {
   }
   .main-video {
     grid-column: span 2;
+  }
+  .contenedor-videos h3 {
+    font-size: 1.5rem;
+    color: black;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
@@ -814,11 +829,11 @@ input[type=reset]:hover {
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .contenedor-videos iframe {
-    width: 100%;
+  .contenedor-videos h3 {
+    font-size: 2rem;
   }
-  .main-video {
-    grid-column: span 2;
+  .contenedor-videos iframe {
+    width: 80%;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
@@ -829,37 +844,52 @@ input[type=reset]:hover {
     font-size: 3rem;
   }
   .main-video iframe {
-    margin-left: 20px;
+    width: 80%;
+  }
+  .main-video-principal iframe {
+    width: 50%;
   }
 }
 /* --------------------------------- Sección Contacto -------------------------- */
+.main-contacto {
+  padding: 1rem;
+}
+
 .main-contacto h2 {
   color: #e6e8e6;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 35%;
 }
 
 /* Articulo que contiene todo el formulario */
 .main-formulario {
-  max-width: 70%;
-  margin: 0 auto;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-form {
+  padding: 1rem;
 }
 
 .main-form h3 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #e6e8e6;
 }
 
 .form-group {
   margin-bottom: 20px;
   display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .main-form-bot {
   justify-content: space-between;
   display: flex;
+  max-width: 90%;
 }
 
 .contact-img {
@@ -869,13 +899,15 @@ input[type=reset]:hover {
 }
 .contact-img img {
   width: 60%;
+  object-fit: cover;
+  border-radius: 13px;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
@@ -903,35 +935,29 @@ label {
     transform: translateY(0);
   }
 }
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
-  .main-contacto {
-    padding: 1rem;
-  }
-  .main-contacto h2 {
-    font-size: 1.6rem;
-  }
-  .main-form {
-    padding: 1rem;
-  }
-  .main-form h3 {
-    font-size: 1.3rem;
-  }
-  .main-formulario {
-    max-width: 100%;
-  }
-}
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
-  .main-formulario {
-    max-width: 100%;
-  }
-  .main-formulario-contacto {
+  .main-contacto {
     padding: 1rem;
   }
-  .main-formulario-form h3 {
+  .main-contacto-form h3 {
     font-size: 1.5rem;
+  }
+  .main-contacto .form-group label {
+    font-size: 1.1rem;
+    text-align: start;
+  }
+}
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form-group label {
+    font-size: 1.2rem;
+    text-align: start;
+  }
+  .main-form h3 {
+    font-size: 2rem;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
@@ -940,13 +966,17 @@ label {
   .main-contacto h2 {
     font-size: 3.5rem;
   }
-  .main-about-destacado h3 {
-    font-size: 3rem;
+  .main-form h3 {
+    font-size: 2.5rem;
   }
   .contact-img {
     width: 65%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .form-group label {
+    font-size: 1.3rem;
+    text-align: start;
   }
 }
 

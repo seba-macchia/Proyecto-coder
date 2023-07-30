@@ -25,10 +25,7 @@
       margin: 5px 10px;
 
       &:hover{
-        font-size:  initial;
-        background-color: initial;
-        transform: none;
-        transition: none;
+        pointer-events: none;
       }
     }
   }

@@ -4,7 +4,8 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-  width: 100%;
+  max-width: 90%;
+  min-width: 80%;
   padding: 10px;
   border: 1px solid $c-negro;
   border-radius: 4px;
@@ -19,7 +20,7 @@ input[type="checkbox"] {
 input[type="submit"],
 input[type="reset"] {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   background-color: $c-negro;
   color: $c-letra;
@@ -37,4 +38,15 @@ input[type="reset"]:hover{
 .main-form-bot input{
   border: $c-letra solid 2px;
   width: 300px;
+}
+
+/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
+@media (max-width: 480px){
+  input[type="submit"]:hover,
+  input[type="reset"]:hover{
+    font-size:  initial;
+    background-color: initial;
+    pointer-events: none;
+  }
+
 }

@@ -14,6 +14,7 @@
 // h3
 .contenedor-videos h3{
   color: $c-letra;
+  font-size: 2.5rem;
 }
 
 /*  El maun contiene un video principal (destacado) */
@@ -21,7 +22,8 @@
   @include contenedor-video(span 2);
 
   & iframe{
-    border: $c-negro dashed 3px;
+    border: 3px dashed transparent;
+    animation: titilar 1s infinite;
     border-radius: 15px;
   }
 }
@@ -38,16 +40,15 @@
     border-color: transparent;
   }
   50% {
-    border-color: black;
+    border-color: $c-negro;
   }
   100% {
     border-color: transparent;
   }
 }
 
-.main-video-principal iframe{
-  border: 3px dashed transparent;
-  animation: titilar 1s infinite;
+.main-video iframe{
+  border-radius: 15px;
 }
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
@@ -56,6 +57,10 @@
   }
   .main-video{
     grid-column: span 2;
+  }
+  .contenedor-videos h3{
+    font-size: 1.5rem;
+    color: $c-negro;
   }
 }
 
@@ -73,14 +78,12 @@
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px){
-
+  .contenedor-videos h3{
+    font-size: 2rem;
+  }
   .contenedor-videos iframe{
-    width: 100%;
+    width: 80%;
   }
-  .main-video{
-  grid-column: span 2;
-  }
-
 }
 
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
@@ -91,7 +94,10 @@
     font-size: 3rem;
   }
   .main-video iframe{
-    margin-left: 20px;
+    width: 80%;
+  }
+  .main-video-principal iframe{
+    width: 50%;
   }
 
 }

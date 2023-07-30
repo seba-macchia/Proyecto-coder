@@ -6,7 +6,7 @@
   @include contenedor-columna(space-between, row);
 }
 .footer-h3{
-  color: $c-letra2;
+  color: $c-fondo;
   text-align: end;
   width: 300px;
   }
@@ -16,6 +16,8 @@
 .footer-logo img{
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  border-radius: 13px;
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */

@@ -14,19 +14,20 @@
   & h3{
     grid-column: span 2;
     width: 50%;
-    color: $c-letra;
+    color: $c-fondo;
     font-size: 2.5rem;
   }
 }
 
-/* contiene imagenees separadas, para poder ocultar en la vista mobile */
+/* contiene imagenes separadas, para poder ocultar en la vista mobile */
 .main-about-img-left{
   @include centrar;
 
   & img{
     width: 100%;
     padding: 1rem;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 20px;
   }
 }
 
@@ -37,7 +38,8 @@
   & img{
     width: 100%;
     padding: 1rem;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 20px;
   }
 }
 
@@ -65,6 +67,8 @@
 
   & img{
     width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
   }
 }
 
@@ -115,7 +119,7 @@
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
   .main-about h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 80%;
   }
   
@@ -150,6 +154,7 @@
       text-align: center;
       font-size: 1.5rem;
       padding: .3rem;
+      color: $c-fondo;
     }
     // lista de menciones destacadas
     .main-about-destacado ul li{
@@ -177,7 +182,8 @@
     .main-about-img-right img:hover,
     .main-img-jov img:hover {
     transform: none;
-}
+    pointer-events: none;
+  }
 
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */

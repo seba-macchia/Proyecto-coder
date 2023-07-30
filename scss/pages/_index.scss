@@ -8,6 +8,8 @@
 
 .main-contenedor img{
   width: 100%;
+  object-fit: cover;
+  border-radius: 13px;
 }
   // Seccion que contiene el main (con las 2 imagenes, a y reproductor)
 .main-div-contenedor{
@@ -34,7 +36,7 @@
 
 
   &:hover{
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       background-color: $c-fondo;
       color: $c-negro;
     }
@@ -82,23 +84,19 @@
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
   .main-a a{
-    font-size: 1rem;
-  }
-  .main-a a:hover{
-    display: none;
+    font-size: .8rem;
+  
+    &:hover{
+      display: none;
+    }
   }
 }
-
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px){
   .main-contenedor img{
     width: 100%;
     height: auto;
-  }
-
-  .main-a a{
-    font-size: 1.4rem;
   }
 
 }

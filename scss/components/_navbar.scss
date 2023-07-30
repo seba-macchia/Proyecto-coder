@@ -5,19 +5,19 @@
 .navbar-collapse{
   text-align: center; 
   font-size: 1.3rem;
-
+}
 .navbar-brand{
   font-weight: bold;
   color: $c-negro;
   font-size: 1.6rem;
   padding: 0;
   margin: 0;
+}
+.navbar-brand:hover, .navbar-brand:focus{
+  color: $c-letra;
+}
 
-  &:hover, &:focus{
-    color: $c-letra;
-  }
-}
-}
+
 
 .nav-link{
   color: $c-negro;
@@ -37,13 +37,11 @@
   border-radius: 15px;
   border: 1px solid $c-negro;
 }
-
 /* animacion de ingreso a la pagina en el navbar */
 .navbar-collapse {
   transform: translateY(-100%);
   animation: slide-animation 1s ease-in forwards;
 }
-
 @keyframes slide-animation {
   from { transform: translateY(-100%); }
   to { transform: translateY(0); }
@@ -59,6 +57,9 @@
   .nav-link{
     font-size: 1rem;
   }
+  .navbar-brand{
+    font-size: 1.2rem;
+  }
 }
 
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
@@ -68,24 +69,23 @@
     text-align: center; 
     font-size: 1rem;
 
-    }
-    .navbar-brand{
+    &-brand{
       display: none;
     }
     .nav-link{
       font-size: 1rem;
     }
   }
+}
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px){
   .navbar-collapse{
     text-align: center; 
     font-size: 1rem;
-  }
   
-  .navbar-brand{
-    display: none;
+      &-brand{
+        display: none;
+      }
   }
-  
 }
