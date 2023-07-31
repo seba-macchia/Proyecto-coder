@@ -9,11 +9,13 @@ textarea {
   padding: 10px;
   border: 1px solid $c-negro;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
-  margin-top: 10px;
-  margin-left: 25px;
+  margin-bottom: 3px;
+  margin-left: 24px;
+  cursor: pointer;
 }
 
 

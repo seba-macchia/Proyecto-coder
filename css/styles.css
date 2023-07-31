@@ -138,11 +138,13 @@ textarea {
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 input[type=checkbox] {
-  margin-top: 10px;
-  margin-left: 25px;
+  margin-bottom: 3px;
+  margin-left: 24px;
+  cursor: pointer;
 }
 
 input[type=submit],
@@ -908,6 +910,16 @@ input[type=reset]:hover {
   color: #e6e8e6;
 }
 
+.form-group-novedades {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  width: 55%;
+}
+.form-group-novedades label {
+  font-size: 1.3rem;
+}
+
 .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -999,8 +1011,8 @@ label {
     font-size: 2.5rem;
   }
   .contact-img {
-    width: 65%;
-    margin-left: auto;
+    width: 60%;
+    margin-left: 16%;
     margin-right: auto;
   }
   .form-group label {
