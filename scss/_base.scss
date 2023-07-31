@@ -13,6 +13,10 @@ $c-letra2: azure;
 $c-negro: black;
 // color header
 $c-header:#e8e8e8;
+//-------------------
+// Fuentes
+$ff-titulos: 'Dai Banna SIL', serif;
+$ff-parrafos:'Nunito Sans', sans-serif;
 
 
 
@@ -21,7 +25,7 @@ $c-header:#e8e8e8;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: $ff-titulos;
   
 }
 

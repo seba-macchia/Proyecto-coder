@@ -22,24 +22,28 @@
 /* contiene imagenes separadas, para poder ocultar en la vista mobile */
 .main-about-img-left{
   @include centrar;
+  text-align: center;
 
   & img{
-    width: 100%;
+    width: 90%;
     padding: 1rem;
     object-fit: cover;
     border-radius: 20px;
+    max-height: 800px;
   }
 }
 
 // contenedor de imagenes 2
 .main-about-img-right{
   @include centrar;
+  text-align: center;
 
   & img{
-    width: 100%;
+    width: 90%;
     padding: 1rem;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 20px;
+    max-height: 800px;
   }
 }
 
@@ -50,6 +54,7 @@
   & p{
     font-size: 1rem;
     color: $c-letra;
+    font-family: $ff-parrafos;
   }
 }
 .main-about-p-negro{
@@ -58,17 +63,20 @@
   & p{
     font-size: 1rem;
     color: $c-negro;
+    font-family: $ff-parrafos;
   }
 }
 
 /* tercer contenedor de imagenes, se encuentra al final antes del destacado */
 .main-img-jov{
   @include centrar;
+  text-align: center;
 
   & img{
-    width: 100%;
+    width: 90%;
     object-fit: cover;
     border-radius: 20px;
+    max-height: 800px;
   }
 }
 
@@ -200,10 +208,10 @@
 @media (min-width: 1025px){
 
   .main-about-p-blanco p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .main-about-p-negro p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .main-about h2{
     font-size: 3rem;
@@ -214,10 +222,19 @@
   .main-about-img-left,
   .main-about-img-right ,
   .main-img-jov{
-    width: 60%;
-    
+    width: 60%
     }
-  .main-about-destacado ul li{
-    font-size: 1.3rem;
+  .main-about-destacado{
+    align-self: center;
+    justify-self: center;
+
+    & h4{
+      font-size: 2.5rem;
+      color: $c-negro;
+      font-weight: bold;
     }
+    & ul li{
+    font-size: 1.5rem;
+    }
+  }  
 }
