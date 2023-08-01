@@ -1,9 +1,14 @@
 /* botones de las redes*/
-.btn-redes{
+.footer-redes{
   margin-top: 50px;
 
   & button{
     margin-left: 15px;
+    background-color: transparent;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    border: 0;
 
     &:hover{
       background-color: $c-fondo2;
@@ -17,7 +22,7 @@
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px){
-  .btn-redes{
+  .footer-redes{
     margin-top: 0;
     margin-left: 20px;
 

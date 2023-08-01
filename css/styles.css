@@ -32,13 +32,18 @@ main {
 
 /* creando diferentes mixin para utilizar en las páginas */
 /* botones de las redes*/
-.btn-redes {
+.footer-redes {
   margin-top: 50px;
 }
-.btn-redes button {
+.footer-redes button {
   margin-left: 15px;
+  background-color: transparent;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border: 0;
 }
-.btn-redes button:hover {
+.footer-redes button:hover {
   background-color: #5c677d;
   color: #e6e8e6;
   transform: scale(1.8);
@@ -47,14 +52,14 @@ main {
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
-  .btn-redes {
+  .footer-redes {
     margin-top: 0;
     margin-left: 20px;
   }
-  .btn-redes button {
+  .footer-redes button {
     margin: 5px 10px;
   }
-  .btn-redes button:hover {
+  .footer-redes button:hover {
     pointer-events: none;
   }
 }
@@ -282,15 +287,12 @@ input[type=reset]:hover {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  /* logo del footer */
 }
-
-.footer-h3 {
+.footer-redes h3 {
   color: #c39d5f;
-  text-align: end;
-  width: 300px;
+  text-align: center;
 }
-
-/* logo del footer */
 .footer-logo img {
   width: 150px;
   height: 150px;
@@ -306,22 +308,8 @@ input[type=reset]:hover {
   .footer-logo {
     display: none;
   }
-  .footer-h3 {
+  .footer-redes h3 {
     display: none;
-  }
-}
-/* ------ MEDIA QUERY ( MIN-481 / MAX-767) --------- */
-/* Media Query for low resolution Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .footer-h3 {
-    display: none;
-  }
-}
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .footer-h3 {
-    text-align: start;
   }
 }
 /* ----------------- MAIN (CLASE CONTENEDOR) -------------------------- */
@@ -607,7 +595,7 @@ input[type=reset]:hover {
 .main-about-p-blanco p {
   font-size: 1rem;
   color: #e6e8e6;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-about-p-negro {
@@ -616,7 +604,7 @@ input[type=reset]:hover {
 .main-about-p-negro p {
   font-size: 1rem;
   color: black;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* tercer contenedor de imagenes, se encuentra al final antes del destacado */
