@@ -5,9 +5,30 @@
   padding: .6rem;
   @include contenedor-columna(space-between, row);
 
+  &-nav ul{
+    list-style: none;
+    width: 80%;
+    margin-left: 100px;
+  }
+  & a{
+    text-decoration: none;
+    color: $c-fondo;
+    font-size: 1.6rem;
+  }
+  & li:hover{
+    background-color: $c-fondo3;
+    color: $c-letra;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  &-redes{
+    justify-self: center;
+    margin-bottom: 50px;
+  }
   &-redes h3{
   color: $c-fondo;
   text-align: center;
+  margin-bottom: 20px;
   }
 /* logo del footer */
   &-logo img{
@@ -22,13 +43,35 @@
 @media (max-width: 480px){
   
   .footer{
-    padding: .6rem;
+    padding: .4em;
+    justify-content: center;
   &-logo{
     display: none;
   }
-  &-redes h3{
+  &-nav{
     display: none;
   }
-  
+
+  &-redes h3{
+    font-size: 1.3rem;
   }
+  }
+
+}
+/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px){
+  .footer-nav{
+    display: none;
+  }
+
+}
+/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  .footer-nav ul{
+    width: 100%;
+    margin-left: 15px;
+  }
+
 }
