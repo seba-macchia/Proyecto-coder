@@ -1,38 +1,37 @@
 /* Barra de navegacion */
-.container-fluid{
+.container-fluid {
   background-color: $c-fondo;
 }
-.navbar-collapse{
-  text-align: center; 
+.navbar-collapse {
+  text-align: center;
   font-size: 1.3rem;
 }
-.navbar-brand{
+.navbar-brand {
   font-weight: bold;
   color: $c-negro;
   font-size: 1.6rem;
   padding: 0;
   margin: 0;
 }
-.navbar-brand:hover, .navbar-brand:focus{
-  color: $c-letra;
+.navbar-brand:hover,
+.navbar-brand:focus {
+  pointer-events: none;
 }
 
-
-
-.nav-link{
+.nav-link {
   color: $c-negro;
   margin-left: 15px;
   font-size: 1.4rem;
   font-weight: bold;
 
-  &:hover{
+  &:hover {
     background-color: $c-negro;
-    color:$c-letra2;
+    color: $c-letra2;
     border-radius: 10px;
   }
 }
 
-.navbar-toggler{
+.navbar-toggler {
   background-color: $c-fondo2;
   border-radius: 15px;
   border: 1px solid $c-negro;
@@ -43,49 +42,42 @@
   animation: slide-animation 1s ease-in forwards;
 }
 @keyframes slide-animation {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* -------------- MEDIA QUERY (MAX: 480px) */
 /* Media Query for Tablets Ipads portrait mode */
-@media (max-width: 480px){
-  .navbar-collapse{
+@media (max-width: 480px) {
+  .navbar-collapse {
     animation: none;
     transform: none;
   }
-  .nav-link{
+  .nav-link {
     font-size: 1rem;
   }
-  .navbar-brand{
+  .navbar-brand {
     font-size: 1.2rem;
   }
 }
 
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
-  .navbar-collapse{
-    text-align: center; 
-    font-size: 1rem;
-
-    &-brand{
-      display: none;
-    }
-    .nav-link{
+@media (min-width: 768px) {
+  .navbar {
+    &-collapse {
+      text-align: center;
       font-size: 1rem;
     }
+    &-brand {
+      display: none;
+    }
   }
-}
-/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px){
-  .navbar-collapse{
-    text-align: center; 
+  .nav-link {
     font-size: 1rem;
-  
-      &-brand{
-        display: none;
-      }
   }
 }

@@ -16,7 +16,7 @@
   margin-right: auto;
 }
 .main-form{
-  padding: 1rem;
+  padding: 1em;
   
 }
 .main-form h3{
@@ -48,7 +48,7 @@
 // imagen de la seccion contacto
 .contact-img{
   text-align: center;
-  padding: 1rem;
+  padding: 1em;
   width: 100%;
 
   & img{
@@ -96,7 +96,7 @@ label {
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px){
   .main-contacto{
-      padding: 1rem;
+      padding: 1em;
     
     &-form h3{
       font-size: 1.5rem;

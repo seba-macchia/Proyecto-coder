@@ -1,6 +1,6 @@
 /* creo las variables a utilizar en las paginas*/
 //color de fondo 1
-$c-fondo:#c39d5f;
+$c-fondo: #c39d5f;
 //color de fondo 2
 $c-fondo2: #5c677d;
 //color fondo 3
@@ -12,31 +12,30 @@ $c-letra2: azure;
 //color negro
 $c-negro: black;
 // color header
-$c-header:#e8e8e8;
+$c-header: #e8e8e8;
 //-------------------
 // Fuentes
-$ff-titulos: 'Bungee Spice', cursive;
-$ff-parrafos:'Roboto', sans-serif;
-
-
-
-
+$ff-titulos: "Bungee Spice", cursive;
+$ff-parrafos: "Roboto", sans-serif;
 
 /* SACO LOS ELEMENTOS QUE POR DEFECTO  QUE TRAE CSS Y AGREGO ALGUNAS COSAS QUE VAN PARA TODO EL HTML */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: $ff-titulos;
-  
 }
 
 /* fondo de todos los main */
-main{
-  background: linear-gradient($c-fondo2,$c-fondo3);
-  padding: 2rem;
+body{
+  background: linear-gradient($c-fondo2, $c-fondo3);
 }
-
+main {
+  padding: 2em;
+}
+a {
+  text-decoration: none;
+}
 /* Animación de todos los h2 */
 @keyframes parpadeo {
   0% {
@@ -64,7 +63,7 @@ main{
 }
 
 //este está aplicado en el contenedor de videos y mí música
-@mixin contenedor-grid{
+@mixin contenedor-grid {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
@@ -80,7 +79,7 @@ main{
 }
 
 // sobre mí
-@mixin centrar{
+@mixin centrar {
   width: 80%;
   justify-self: center;
   align-self: center;

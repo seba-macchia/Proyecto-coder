@@ -1,42 +1,41 @@
 /* ----------------- MAIN (CLASE CONTENEDOR) -------------------------- */
-.main-contenedor h2{
+.main-contenedor h2 {
   color: $c-letra2;
   text-align: center;
   font-size: 2rem;
   width: 70%;
 }
 
-.main-contenedor img{
+.main-contenedor img {
   width: 100%;
-  object-fit:cover ;
+  object-fit: cover;
   border-radius: 20px;
 }
-  // Seccion que contiene el main (con las 2 imagenes, a y reproductor)
-.main-div-contenedor{
+// Seccion que contiene el main (con las 2 imagenes, a y reproductor)
+.main-div-contenedor {
   @include contenedor-columna(space-around, column);
 }
 
 /* imagen del main */
-.main-img{
+.main-img {
   width: 70%;
-  margin: 1rem;
+  margin: 1em;
   text-align: center;
 }
 /* link del main */
-.main-a{
+.main-a {
   justify-self: center;
   display: flex;
 
-  & a{
+  & a {
     color: $c-letra2;
     border: $c-letra 4px solid;
     border-radius: 10px;
     background-color: $c-negro;
     text-decoration: none;
-    font-size: 1.2rem ;
+    font-size: 1.2rem;
 
-
-  &:hover{
+    &:hover {
       font-size: 1.7rem;
       background-color: $c-fondo;
       color: $c-negro;
@@ -44,19 +43,21 @@
   }
 }
 /* imagen 2 del main */
-.main-img2{
+.main-img2 {
   width: 70%;
-  margin: 1rem;
+  margin: 1em;
   text-align: center;
 }
 
+/* Reproductor*/
+aside{
+  @include contenedor-columna(space-around, column);}
 
-/* Reproductor del main */
-.reproductor{
+.reproductor {
   width: 70%;
-  margin: 1rem;
+  margin: 1em;
 
-  & iframe{
+  & iframe {
     width: 100%;
   }
 }
@@ -84,55 +85,53 @@
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px){
-  .main-a a{
+@media (max-width: 480px) {
+  .main-a a {
     font-size: 1rem;
-  
-    &:hover{
+
+    &:hover {
       display: none;
     }
   }
-  .main-div-contenedor img{
+  .main-div-contenedor img {
     width: 90%;
     height: 350px;
   }
-  .main-contenedor{
+  .main-contenedor {
     padding: 0;
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px){
-  .main-contenedor img{
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-contenedor img {
     width: 100%;
     height: 600px;
     object-fit: cover;
   }
-
 }
-
 
 /* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
-  .main-contenedor img{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-contenedor img {
     height: auto;
   }
 }
 
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px){
-  .main-contenedor h2{
+@media (min-width: 1025px) {
+  .main-contenedor h2 {
     font-size: 3rem;
   }
-  .main-contenedor img{
+  .main-contenedor img {
     height: auto;
     margin-bottom: 40px;
     margin-top: 40px;
   }
-  
-  .reproductor{
-    width: 100%; 
+
+  .reproductor {
+    width: 100%;
   }
 }

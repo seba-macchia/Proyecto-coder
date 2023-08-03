@@ -1,15 +1,15 @@
 /* ------------ CLASE DEL HEADER (CABECERA) -------- */
-.cabecera{
+.cabecera {
   background: $c-header;
 
-  &-div{
+  &-div {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 0.5em;
 
-    & h1{
+    & h1 {
       font-size: 3rem;
       text-align: center;
       align-self: center;
@@ -21,16 +21,15 @@
 
 /* foto-header */
 
-.foto-header{
+.foto-header {
   width: 176px;
   height: 176px;
 }
 /*  logo-header */
-.logo{
+.logo {
   width: 176px;
   height: 176px;
   margin-right: 5px;
-  
 }
 
 /* Animación del encabezado */
@@ -42,31 +41,34 @@ h1,
 }
 
 @keyframes fade-in-animation {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
-  .foto-header{
+  .foto-header {
     display: none;
   }
-  .cabecera-div h1{
+  .cabecera-div h1 {
     margin-left: 0;
     font-size: 1.4rem;
   }
-  .logo{
+  .logo {
     width: 120px;
     height: 100px;
     object-fit: cover;
   }
 }
 
-
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
-@media (min-width: 481px) and (max-width:767px){
-  .cabecera-div h1{
+@media (min-width: 481px) and (max-width: 767px) {
+  .cabecera-div h1 {
     font-size: 2.5rem;
     text-shadow: 1px 3px $c-negro;
   }

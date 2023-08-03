@@ -1,5 +1,5 @@
 /*----------------------- SECCION SOBRE MI  ------------------*/
-.main-about h2{
+.main-about h2 {
   color: $c-letra;
   text-align: end;
   font-size: 2rem;
@@ -7,11 +7,11 @@
 }
 
 /*  seccion que contiene todo el contenido del main, menos el h2 */
-.main-about-sec{
+.main-about-sec {
   display: grid;
-  padding:1rem;
+  padding: 1em;
 
-  & h3{
+  & h3 {
     grid-column: span 2;
     width: 50%;
     color: $c-fondo;
@@ -20,13 +20,13 @@
 }
 
 /* contiene imagenes separadas, para poder ocultar en la vista mobile */
-.main-about-img-left{
+.main-about-img-left {
   @include centrar;
   text-align: center;
 
-  & img{
+  & img {
     width: 100%;
-    padding: .6rem;
+    padding: 0.6em;
     object-fit: cover;
     border-radius: 30px;
     max-height: 800px;
@@ -34,13 +34,13 @@
 }
 
 // contenedor de imagenes 2
-.main-about-img-right{
+.main-about-img-right {
   @include centrar;
   text-align: center;
 
-  & img{
+  & img {
     width: 100%;
-    padding: .6rem;
+    padding: 0.6em;
     object-fit: cover;
     border-radius: 30px;
     max-height: 800px;
@@ -48,19 +48,19 @@
 }
 
 /* contenedor de los parrafos en negro */
-.main-about-p-blanco{
+.main-about-p-blanco {
   align-self: center;
 
-  & p{
+  & p {
     font-size: 1rem;
     color: $c-letra;
     font-family: $ff-parrafos;
   }
 }
-.main-about-p-negro{
+.main-about-p-negro {
   align-self: center;
 
-  & p{
+  & p {
     font-size: 1rem;
     color: $c-negro;
     font-family: $ff-parrafos;
@@ -68,11 +68,11 @@
 }
 
 /* tercer contenedor de imagenes, se encuentra al final antes del destacado */
-.main-img-jov{
+.main-img-jov {
   @include centrar;
   text-align: center;
 
-  & img{
+  & img {
     width: 100%;
     object-fit: cover;
     border-radius: 30px;
@@ -81,20 +81,19 @@
 }
 
 /* titulo destacado */
-.main-about-destacado h4{
+.main-about-destacado h4 {
   margin-top: 10px;
   text-align: center;
-  padding: .3rem;
+  padding: 0.3em;
   color: $c-negro;
 }
 
 // el destacado se encuentra en formato lista
-.main-about-destacado ul li{
+.main-about-destacado ul li {
   font-size: 1.7vw;
-  padding: .5rem;
+  padding: 0.5em;
   color: $c-negro;
 }
-
 
 /* Animación de los párrafos e imágenes dentro de "main-about" */
 .main-about-p-blanco,
@@ -106,8 +105,12 @@
 }
 
 @keyframes ingreso {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animación de destacar imágenes */
@@ -125,129 +128,128 @@
 }
 
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px){
-  .main-about{
-    padding: .7rem;
-  
-  & h2{
-    font-size: 1.8rem;
-    width: 80%;
-  }
-  
-  .main-about-sec{
-    padding: 0;
+@media (max-width: 480px) {
+  .main-about {
+    padding: 0.7em;
 
-    & h3{
-      font-size: 1.5rem;
+    & h2 {
+      font-size: 1.8rem;
       width: 80%;
     }
-  }
-  // contenedor de letras en blanco
-  .main-about-p-blanco{
-    grid-column: span 2;
-    padding: .3rem;
 
-    & p{
-      font-size: .8rem;
+    .main-about-sec {
+      padding: 0;
+
+      & h3 {
+        font-size: 1.5rem;
+        width: 80%;
+      }
     }
-  }
-  // contenedor de letras en negro
-  .main-about-p-negro{
-    grid-column: span 2;
-    padding: .3rem;
-    
-    & p{
-      font-size: .8rem;
+    // contenedor de letras en blanco
+    .main-about-p-blanco {
+      grid-column: span 2;
+      padding: 0.3em;
+
+      & p {
+        font-size: 0.8rem;
+      }
     }
-  }
+    // contenedor de letras en negro
+    .main-about-p-negro {
+      grid-column: span 2;
+      padding: 0.3em;
+
+      & p {
+        font-size: 0.8rem;
+      }
+    }
     // titulo de las menciones destacadas
-    .main-about-destacado h4{
+    .main-about-destacado h4 {
       text-align: center;
       font-size: 1.5rem;
-      padding: .3rem;
+      padding: 0.3em;
       color: $c-fondo;
     }
     // lista de menciones destacadas
-    .main-about-destacado ul li{
-      font-size: .8rem;
-      padding: .5rem;
+    .main-about-destacado ul li {
+      font-size: 0.8rem;
+      padding: 0.5em;
     }
 
     // oculto una imagen
-    .main-about-img-right img{
+    .main-about-img-right img {
       display: none;
     }
     // oculto otra imagen
-    .main-img-jov img{
+    .main-img-jov img {
       display: none;
     }
-    .main-about-img-left{
+    .main-about-img-left {
       width: 100%;
 
-    & img{
-      width: 90%;
-      height: 250px;
+      & img {
+        width: 90%;
+        height: 250px;
       }
     }
-    .main-about-destacado ul li{
-    padding: .3rem;
+    .main-about-destacado ul li {
+      padding: 0.3em;
     }
     // le saco en la version mobile el hover de la imagen
     .main-about-img-left img:hover,
     .main-about-img-right img:hover,
     .main-img-jov img:hover {
-    transform: none;
-    pointer-events: none;
+      transform: none;
+      pointer-events: none;
     }
   }
 }
 /* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
 /* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px){
-  .main-about-sec{
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-about-sec {
     padding: 0;
-  
-  & h3{
-    font-size: 2rem;
+
+    & h3 {
+      font-size: 2rem;
     }
   }
-  .main-about{
-    padding: .8rem;
+  .main-about {
+    padding: 0.8em;
   }
 }
 
 /* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px){
-
-  .main-about-p-blanco p{
+@media (min-width: 1025px) {
+  .main-about-p-blanco p {
     font-size: 1.5rem;
   }
-  .main-about-p-negro p{
+  .main-about-p-negro p {
     font-size: 1.5rem;
   }
-  .main-about h2{
+  .main-about h2 {
     font-size: 3rem;
   }
-  .main-about-sect h3{
+  .main-about-sect h3 {
     font-size: 2rem;
   }
   .main-about-img-left,
-  .main-about-img-right ,
-  .main-img-jov{
-    width: 80%
-    }
-  .main-about-destacado{
+  .main-about-img-right,
+  .main-img-jov {
+    width: 80%;
+  }
+  .main-about-destacado {
     align-self: center;
     justify-self: center;
 
-    & h4{
+    & h4 {
       font-size: 2.5rem;
       color: $c-negro;
       font-weight: bold;
     }
-    & ul li{
-    font-size: 1.5rem;
+    & ul li {
+      font-size: 1.5rem;
     }
-  }  
+  }
 }
