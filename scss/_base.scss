@@ -59,6 +59,7 @@ a {
   display: flex;
   justify-content: $justify;
   flex-direction: $direction;
+  flex-wrap:wrap;
   align-items: center;
 }
 

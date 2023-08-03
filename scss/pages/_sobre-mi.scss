@@ -130,26 +130,29 @@
 /* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
 @media (max-width: 480px) {
   .main-about {
-    padding: 0.7em;
+    @include contenedor-columna(row,center);
 
     & h2 {
       font-size: 1.8rem;
-      width: 80%;
+      width: 100%;
+      text-align: center;
     }
 
     .main-about-sec {
+      @include contenedor-columna(row,center);
       padding: 0;
 
       & h3 {
         font-size: 1.5rem;
-        width: 80%;
+        width: 100%;
+        text-align: center;
       }
     }
     // contenedor de letras en blanco
     .main-about-p-blanco {
       grid-column: span 2;
       padding: 0.3em;
-
+      text-align: center;
       & p {
         font-size: 0.8rem;
       }
@@ -158,6 +161,7 @@
     .main-about-p-negro {
       grid-column: span 2;
       padding: 0.3em;
+      text-align: center;
 
       & p {
         font-size: 0.8rem;
@@ -192,8 +196,18 @@
         height: 250px;
       }
     }
+    .main-about-destacado{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     .main-about-destacado ul li {
       padding: 0.3em;
+    
+    }
+    .main-about-destacado h4{
+      width: 100%;
     }
     // le saco en la version mobile el hover de la imagen
     .main-about-img-left img:hover,

@@ -91,6 +91,7 @@ aside{
 
     &:hover {
       display: none;
+      pointer-events: none;
     }
   }
   .main-div-contenedor img {
