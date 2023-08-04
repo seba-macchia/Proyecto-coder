@@ -30,9 +30,9 @@ input[type="reset"] {
 }
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  background-color: $c-fondo;
-  font-size: 1.5rem;
-  color: $c-letra;
+  font-size: initial;
+  background-color: initial;
+  pointer-events: none;
 }
 
 .main-form-bot input {
@@ -40,12 +40,13 @@ input[type="reset"]:hover {
   width: 300px;
 }
 
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
-  input[type="submit"]:hover,
-  input[type="reset"]:hover {
-    font-size: initial;
-    background-color: initial;
-    pointer-events: none;
+/* ---------------------------- Media Query(min-768) -------------------------- */
+@media (min-width: 768px) {
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: $c-fondo;
+  font-size: 1.5rem;
+  color: $c-letra;
+  pointer-events: painted;
   }
 }

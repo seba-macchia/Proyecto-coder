@@ -1,18 +1,20 @@
 /* botones de las redes*/
-.footer-redes button {
-  margin-right: 15px;
-  background-color: transparent;
-  color: white;
-  width: fit-content;
-  height: fit-content;
-  font-size: 1.2rem;
-  border: 0;
+.footer-redes {
+  margin-top: 0;
+  margin-left: 20px;
+  & button {
+    margin-right: 15px;
+    margin-top: 10px;
+    background-color: transparent;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.2rem;
+    border: 0;
 
-  &:hover {
-    background-color: $c-fondo2;
-    color: $c-letra;
-    transform: scale(1.8);
-    transition: transform 0.3s ease-in-out;
+    &:hover {
+      pointer-events: none;
+    }
   }
 }
 
@@ -37,8 +39,8 @@
 .envelope {
   margin: 0;
 }
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
+/* ---------------------------- Media Query (min-768px) -------------------------- */
+@media (min-width: 768px) {
   .footer-redes {
     margin-top: 0;
     margin-left: 20px;
@@ -47,7 +49,11 @@
       margin: 5px 10px;
 
       &:hover {
-        pointer-events: none;
+        background-color: $c-fondo2;
+        color: $c-letra;
+        transform: scale(1.8);
+        transition: transform 0.3s ease-in-out;
+        pointer-events: painted;
       }
     }
   }

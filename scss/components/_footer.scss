@@ -7,19 +7,7 @@
   align-items: center;
 
   &-nav ul {
-    list-style: none;
-    width: 100%;
-    padding: 0;
-  }
-  & a {
-    color: $c-fondo;
-    font-size: 1.6rem;
-  }
-  & li:hover {
-    background-color: $c-fondo3;
-    color: $c-letra;
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
+    display: none;
   }
   &-redes {
     justify-self: center;
@@ -31,42 +19,38 @@
   }
   /* logo del footer */
   &-logo {
+    display: none;
+  }
+}
+
+/* -------------- MEDIA QUERY (MIN: 768) */
+/* Media Query */
+@media (min-width: 768px)  {
+  .footer{
+    &-nav ul{
+      display: block;
+      list-style: none;
+      width: 100%;
+      padding: 0;
+      & a {
+      color: $c-fondo;
+      font-size: 1.6rem;
+    }
+  }
+  
+  & li:hover {
+    background-color: $c-fondo3;
+    color: $c-letra;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    }
+  /* logo del footer */
+  &-logo {
+    display: block;
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 13px;
-  }
-}
-
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
-  .footer {
-    padding: 0.4em;
-    justify-content: center;
-    &-logo {
-      display: none;
     }
-    &-nav {
-      display: none;
-    }
-
-    &-redes h3 {
-      font-size: 1.3rem;
-    }
-  }
-}
-/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .footer-nav {
-    display: none;
-  }
-}
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .footer-nav ul {
-    width: 100%;
-    margin-left: 15px;
   }
 }

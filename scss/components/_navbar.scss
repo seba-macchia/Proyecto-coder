@@ -3,9 +3,10 @@
   background-color: $c-fondo;
 }
 .navbar-collapse {
-  text-align: center;
-  font-size: 1.3rem;
+  animation: none;
+  transform: none;
 }
+
 .navbar-brand {
   font-weight: bold;
   color: $c-negro;
@@ -49,23 +50,8 @@
   }
 }
 
-/* -------------- MEDIA QUERY (MAX: 480px) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (max-width: 480px) {
-  .navbar-collapse {
-    animation: none;
-    transform: none;
-  }
-  .nav-link {
-    font-size: 1rem;
-  }
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-}
-
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
+/* -------------- MEDIA QUERY (MIN: 768) */
+/* Media Query  */
 @media (min-width: 768px) {
   .navbar {
     &-collapse {
