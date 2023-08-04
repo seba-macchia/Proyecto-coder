@@ -1,45 +1,49 @@
-/* ----------------------- Seccion Mi Música  --------------------- */
-.main-musica h2 {
-  color: $c-letra2;
-  text-align: center;
-  font-size: 2rem;
-  width: 35%;
+// ----------------------- Seccion Mi Música  ---------------------
+.main-musica {
+  padding: 0.6em;
+  & h2 {
+    color: $c-letra2;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+  }
 }
-
-.main-musica h3 {
-  width: 80%;
-  text-align: center;
-  color: $c-letra2;
-}
-
 /* seccion de todo el main */
-.main-sec-musica {
-  @include contenedor-grid;
-}
-/*  contenedor de la tapa del disco */
-.main-disco {
-  width: 70%;
-  margin-bottom: 30px;
-  justify-self: center;
-  align-self: center;
-
-  & img {
-    width: 90%;
+.main {
+  &-sec-musica {
+    @include contenedor-flex;
+  }
+  /*  contenedor de la tapa del disco */
+  &-disco {
+    width: 80%;
+    margin-bottom: 30px;
     justify-self: center;
     align-self: center;
-    object-fit: cover;
-    border-radius: 13px;
+    & img {
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+      object-fit: cover;
+      border-radius: 13px;
+      margin-bottom: 1em;
+    }
+    &-h3 {
+      display: none;
+      &-mobile {
+        width: 80%;
+        text-align: center;
+        color: $c-letra2;
+        animation: trasladar 2s ease-in-out infinite;
+      }
+    }
   }
 }
 
 /* contenedor de canciones */
 .main-canciones {
-  width: 80%;
-
   & iframe {
     width: 100%;
-    height: 100px;
-    margin: 6.4px;
+    margin-bottom: 0.6em;
   }
 }
 
@@ -53,50 +57,46 @@
   }
 }
 
-.trasladar-x {
-  animation: trasladar 2s ease-in-out infinite;
-}
-
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
-  .main-musica h2 {
-    font-size: 1.4rem;
-    width: 100%;
-  }
-
-  .main-sec-musica {
-    grid-template-columns: 1fr;
-    padding: 7px;
-
-    & h3 {
-      font-size: 1rem;
-      margin-top: 10px;
-      width: 90%;
+/* ----------------------- MEDIA QUERY (MIN: 768) ------------------------ */
+/* Media Query*/
+@media (min-width: 768px) {
+  .main {
+    &-sec-musica {
+      width: 100%;
+      margin-top: 15px;
     }
-  }
-
-  .main-disco img {
-    width: 90%;
-  }
-  .main-canciones {
-    width: 90%;
-  }
-}
-
-/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) {
-  .main-disco img {
-    width: 80%;
-  }
-  .main-canciones {
-    width: 80%;
-  }
-
-  .main-musica h2 {
-    font-size: 3rem;
-  }
-  .main-sec-musica {
-    margin-top: 15px;
+    &-canciones {
+      width: 85%;
+      min-width: 250px;
+      max-width: 500px;
+      justify-self: center;
+      align-self: center;
+    }
+    &-musica h2 {
+      font-size: 2rem;
+    }
+    &-disco {
+      @include contenedor-grid;
+      grid-column: span 2;
+      grid-row: span 1;
+      width: 90%;
+      justify-self: center;
+      & img {
+        width: 80%;
+        min-width: 400px;
+      }
+      &-h3 {
+        display: block;
+        width: 80%;
+        justify-self: center;
+        text-align: center;
+        color: $c-letra2;
+        animation: trasladar 2s ease-in-out infinite;
+        grid-column: span 2;
+        &-mobile {
+          display: none;
+        }
+      }
+    }
   }
 }

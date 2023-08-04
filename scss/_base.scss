@@ -31,7 +31,7 @@ body{
   background: linear-gradient($c-fondo2, $c-fondo3);
 }
 main {
-  padding: 2em;
+  padding: 1em;
 }
 a {
   text-decoration: none;
@@ -55,12 +55,13 @@ a {
 
 /* creando diferentes mixin para utilizar en las páginas */
 // este esta aplicado en el main y en el footer
-@mixin contenedor-columna($justify, $direction) {
+@mixin contenedor-flex($justify:center, $direction:row) {
   display: flex;
   justify-content: $justify;
   flex-direction: $direction;
   flex-wrap:wrap;
   align-items: center;
+  text-align: center;
 }
 
 //este está aplicado en el contenedor de videos y mí música
@@ -70,16 +71,6 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 
-// mi música
-@mixin contenedor-video($expandir) {
-  width: 100%;
-  max-width: 100%;
-  grid-column: $expandir;
-  grid-row: span 1;
-  text-align: center;
-}
-
-// sobre mí
 @mixin centrar {
   width: 80%;
   justify-self: center;

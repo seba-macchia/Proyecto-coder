@@ -21,7 +21,7 @@
 .nav-link {
   color: $c-negro;
   margin-left: 15px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: bold;
 
   &:hover {
@@ -38,15 +38,14 @@
 }
 /* animacion de ingreso a la pagina en el navbar */
 .navbar-collapse {
-  transform: translateY(-100%);
   animation: slide-animation 1s ease-in forwards;
 }
 @keyframes slide-animation {
-  from {
-    transform: translateY(-100%);
+  0% {
+    transform: translateY(-50%);
   }
-  to {
-    transform: translateY(0);
+  100% {
+    transform: translateY(0%);
   }
 }
 

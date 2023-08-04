@@ -3,7 +3,7 @@
   background: linear-gradient($c-negro, $c-fondo2);
   border: $c-negro solid;
   padding: 0.6em;
-  @include contenedor-columna(space-evenly, row);
+  @include contenedor-flex(space-evenly, row);
   align-items: center;
 
   &-nav ul {

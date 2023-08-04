@@ -1,213 +1,64 @@
 /*----------------------- SECCION SOBRE MI  ------------------*/
-.main-about h2 {
-  color: $c-letra;
-  text-align: end;
-  font-size: 2rem;
-  width: 35%;
-}
-
-/*  seccion que contiene todo el contenido del main, menos el h2 */
-.main-about-sec {
-  display: grid;
-  padding: 1em;
-
-  & h3 {
-    grid-column: span 2;
-    width: 50%;
-    color: $c-fondo;
-    font-size: 2.5rem;
-  }
-}
-
-/* contiene imagenes separadas, para poder ocultar en la vista mobile */
-.main-about-img-left {
-  @include centrar;
-  text-align: center;
-
-  & img {
-    width: 100%;
-    padding: 0.6em;
-    object-fit: cover;
-    border-radius: 30px;
-    max-height: 800px;
-  }
-}
-
-// contenedor de imagenes 2
-.main-about-img-right {
-  @include centrar;
-  text-align: center;
-
-  & img {
-    width: 100%;
-    padding: 0.6em;
-    object-fit: cover;
-    border-radius: 30px;
-    max-height: 800px;
-  }
-}
-
-/* contenedor de los parrafos en negro */
-.main-about-p-blanco {
-  align-self: center;
-
-  & p {
-    font-size: 1rem;
-    color: $c-letra;
-    font-family: $ff-parrafos;
-  }
-}
-.main-about-p-negro {
-  align-self: center;
-
-  & p {
-    font-size: 1rem;
-    color: $c-negro;
-    font-family: $ff-parrafos;
-  }
-}
-
-/* tercer contenedor de imagenes, se encuentra al final antes del destacado */
-.main-img-jov {
-  @include centrar;
-  text-align: center;
-
-  & img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-    max-height: 800px;
-  }
-}
-
-/* titulo destacado */
-.main-about-destacado h4 {
-  margin-top: 10px;
-  text-align: center;
-  padding: 0.3em;
-  color: $c-negro;
-}
-
-// el destacado se encuentra en formato lista
-.main-about-destacado ul li {
-  font-size: 1.7vw;
-  padding: 0.5em;
-  color: $c-negro;
-}
-
-/* Animación de los párrafos e imágenes dentro de "main-about" */
-.main-about-p-blanco,
-.main-about-p-negro,
-.main-about-img-left,
-.main-about-img-right {
-  opacity: 0;
-  animation: ingreso 1s ease-in forwards;
-}
-
-@keyframes ingreso {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Animación de destacar imágenes */
-.main-about-img-left img,
-.main-about-img-right img,
-.main-img-jov img {
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.main-about-img-left img:hover,
-.main-about-img-right img:hover,
-.main-img-jov img:hover {
-  transform: scale(1.2);
-}
-
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
-  .main-about {
-    @include contenedor-columna(row,center);
-
-    & h2 {
-      font-size: 1.8rem;
+.main-about {
+  @include contenedor-flex;
+  &-sec {
+    @include contenedor-flex;
+    padding: 0;
+    & h3 {
+      color: $c-fondo;
+      font-size: 1.3rem;
       width: 100%;
       text-align: center;
     }
-
-    .main-about-sec {
-      @include contenedor-columna(row,center);
-      padding: 0;
-
-      & h3 {
-        font-size: 1.5rem;
-        width: 100%;
-        text-align: center;
-      }
+  }
+  &-p {
+    padding: 0.3em;
+    text-align: center;
+    width: 90%;
+    & p {
+      font-size: 1rem;
     }
-    // contenedor de letras en blanco
-    .main-about-p-blanco {
-      grid-column: span 2;
-      padding: 0.3em;
-      text-align: center;
-      & p {
-        font-size: 0.8rem;
-      }
-    }
-    // contenedor de letras en negro
-    .main-about-p-negro {
-      grid-column: span 2;
-      padding: 0.3em;
-      text-align: center;
-
-      & p {
-        font-size: 0.8rem;
-      }
-    }
+  }
+  .main-about-destacado {
+    @include contenedor-flex;
     // titulo de las menciones destacadas
-    .main-about-destacado h4 {
+    & h4 {
       text-align: center;
       font-size: 1.5rem;
       padding: 0.3em;
       color: $c-fondo;
+      width: 100%;
     }
     // lista de menciones destacadas
-    .main-about-destacado ul li {
+    & ul li {
       font-size: 0.8rem;
-      padding: 0.5em;
+      padding: 0.6em;
     }
+  }
+  .parpadeante {
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+    color: $c-letra;
+  }
 
-    // oculto una imagen
-    .main-about-img-right img {
-      display: none;
-    }
-    // oculto otra imagen
-    .main-img-jov img {
-      display: none;
-    }
-    .main-about-img-left {
-      width: 100%;
-
-      & img {
+  .main {
+    &-about-img {
+      // oculto una imagen
+      &-right img {
+        display: none;
+      }
+      &-left {
         width: 90%;
-        height: 250px;
+        max-width: 400px;
+        & img {
+          width: 100%;
+          border-radius: 15px;
+        }
       }
     }
-    .main-about-destacado{
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    .main-about-destacado ul li {
-      padding: 0.3em;
-    
-    }
-    .main-about-destacado h4{
-      width: 100%;
+    &-img-jov img {
+      display: none;
     }
     // le saco en la version mobile el hover de la imagen
     .main-about-img-left img:hover,
@@ -218,52 +69,74 @@
     }
   }
 }
-/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .main-about-sec {
-    padding: 0;
-
-    & h3 {
-      font-size: 2rem;
-    }
+/* ----------------------- MEDIA QUERY (MIN: 768) ------------------------ */
+/* Media Query for Laptops and Desktops */
+@media (min-width: 768px) {
+  .parpadeante {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 2rem;
   }
+
   .main-about {
-    padding: 0.8em;
+    &-sec {
+      @include contenedor-grid;
+      & h3 {
+        grid-column: span 2;
+        width: 100%;
+        text-align: start;
+        font-size: 1.8rem;
+      }
+    }
+    &-p {
+      justify-self: center;
+      font-size: 1.8rem;
+    }
   }
 }
 
-/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) {
-  .main-about-p-blanco p {
-    font-size: 1.5rem;
-  }
-  .main-about-p-negro p {
-    font-size: 1.5rem;
-  }
-  .main-about h2 {
-    font-size: 3rem;
-  }
-  .main-about-sect h3 {
-    font-size: 2rem;
-  }
-  .main-about-img-left,
-  .main-about-img-right,
-  .main-img-jov {
+.main-about-img{
+  justify-content: center;
+  &-left {
     width: 80%;
-  }
-  .main-about-destacado {
-    align-self: center;
+    max-width: 500px;
     justify-self: center;
+    & img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    &-right {
+      width: 80%;
+      max-width: 500px;
+      justify-self: center;
+      & img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .main-img-jov{
+    width: 80%;
+    max-width: 500px;
+    justify-self: center;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
 
-    & h4 {
-      font-size: 2.5rem;
-      color: $c-negro;
-      font-weight: bold;
-    }
-    & ul li {
-      font-size: 1.5rem;
-    }
+.main-about-destacado {
+  align-self: center;
+  justify-self: center;
+
+  & h4 {
+    font-size: 2rem;
+    color: $c-fondo;
+    font-weight: bold;
+  }
+  & ul li {
+    font-size: 1.4rem;
+    padding: 0.3em;
   }
 }

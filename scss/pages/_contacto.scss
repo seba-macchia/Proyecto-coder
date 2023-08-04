@@ -1,36 +1,46 @@
 /* --------------------------------- Sección Contacto -------------------------- */
 .main-contacto{
   padding: 1rem;
+  & h2{
+    color: $c-letra;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 90%;
+  }
 }
-.main-contacto h2{
-  color: $c-letra;
-  text-align: center;
-  font-size: 1.6rem;
-  width: 35%;
+/* Articulo que contiene todo el formulario */
+.main{
+  &-formulario{
+    @include centrar;
+    justify-content: center;
+  }
+  &-form{
+    padding: 1em;
+    @include contenedor-flex;
+    & h3{
+      width: 100%;
+      text-align: center;
+      font-size: 1.6rem;
+      color: $c-letra;
+    }
+    & label{
+      text-align: center;
+      font-size: 1.1rem;
+    }
+  &-bot{
+    justify-content: space-between;
+    display: flex;
+    max-width: 90%;
+    }
+  }
 }
 
-/* Articulo que contiene todo el formulario */
-.main-formulario {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.main-form{
-  padding: 1em;
-  
-}
-.main-form h3{
-  text-align: center;
-  font-size: 1.3rem;
-  color: $c-letra;
-}
 .form-group-novedades{
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-  width: 55%;
+  @include contenedor-flex(start);
+  width: 100%;
   & label{
-    font-size: 1.3rem;
+    font-size: .8rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -40,11 +50,7 @@
   justify-content: space-evenly;
   flex-direction: column;
 }
-.main-form-bot{
-  justify-content: space-between;
-  display: flex;
-  max-width: 90%;
-}
+
 // imagen de la seccion contacto
 .contact-img{
   text-align: center;
@@ -52,24 +58,12 @@
   width: 100%;
 
   & img{
-    width: 60%;
+    width: 80%;
     object-fit: cover;
     border-radius: 13px;
+    opacity: 0;
+    transform: translateY(-100%);
   }
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: .8rem;
-  text-align: center;
-}
-
-/* animación de la página de contacto */
-.contact-img img {
-  opacity: 0;
-  transform: translateY(-100%);
 }
 
 .main-contacto .contact-img img {
@@ -92,53 +86,28 @@ label {
 }
 
 
-/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px){
-  .main-contacto{
-      padding: 1em;
-    
-    &-form h3{
-      font-size: 1.5rem;
-    }
-    
-  .form-group label{
-    font-size: 1.1rem;
-    text-align: start;
-  }
-  }
-}
 
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
-  .form-group label{
-    font-size: 1.2rem;
-    text-align: start;
+
+/* -------------- MEDIA QUERY (MIN: 768) */
+/* Media Query */
+@media (min-width: 768px){
+  .main{
+    &-contacto h2{
+      width: 60%;
+      font-size: 2rem;
+    }
+    &-form h3{
+      font-size: 1.7rem;
+    }
   }
   .main-form h3{
     font-size: 2rem;
   }
+  .contact-img img{
+    max-width: 800px;
+  }
 }
 
-/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px){
-  .main-contacto h2{
-    font-size: 3.5rem;
-  }
-  .main-form h3{
-    font-size: 2.5rem;
-  }
-  .contact-img{
-    width: 60%;
-    margin-left: 16%;
-    margin-right: auto;
-  }
-  .form-group label{
-    font-size: 1.3rem;
-    text-align: start;
-  }
-}
+
 
 

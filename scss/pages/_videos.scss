@@ -1,37 +1,39 @@
 /*--------------- SECCION VIDEOS ------------------*/
 .contenedor-videos {
-  text-align: start;
-  @include contenedor-grid;
+  text-align: center;
+  @include contenedor-flex;
 
   & h2 {
     color: $c-letra;
     text-align: center;
-    font-size: 2rem;
-    width: 70%;
+    font-size: 2.5rem;
+    width: 80%;
   }
-}
-
-// h3
-.contenedor-videos h3 {
-  color: $c-letra;
-  font-size: 2.5rem;
+  & h3 {
+    color: $c-letra;
+    font-size: 1.5rem;
+  }
 }
 
 /*  El maun contiene un video principal (destacado) */
-.main-video-principal {
-  @include contenedor-video(span 2);
-
-  & iframe {
-    border: 3px dashed transparent;
-    animation: titilar 1s infinite;
-    border-radius: 15px;
-  }
-}
 
 /* también contiene dos videos menos destacados */
 .main-video {
-  @include contenedor-video(span 1);
   padding: 1em;
+  width: 80%;
+  & iframe {
+    width: 100%;
+    border-radius: 20px;
+  }
+  &-principal {
+    width: 80%;
+    & iframe {
+      width: 100%;
+      border: 3px dashed transparent;
+      animation: titilar 1s infinite;
+      border-radius: 15px;
+    }
+  }
 }
 /* Realizo dos animaciones de parpadeo sobre el video destacado */
 
@@ -47,56 +49,38 @@
   }
 }
 
-.main-video iframe {
-  border-radius: 15px;
-}
-/* ---------------------------- Media Query for Mobile Devices (max-480) -------------------------- */
-@media (max-width: 480px) {
-  .contenedor-videos iframe {
-    width: 80%;
-  }
-  .main-video {
-    grid-column: span 2;
-  }
-  .contenedor-videos h3 {
-    font-size: 1.5rem;
-    color: $c-negro;
-  }
-}
+/* -------------- MEDIA QUERY ------------------------- */
 
-/* ----------------------- MEDIA QUERY (MIN-481 / MAX 767) -------------------------- */
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .contenedor-videos iframe {
-    width: 100%;
+@media (min-width: 768px) {
+  .contenedor-videos {
+    @include contenedor-grid;
+    & h2 {
+      grid-column: span 2;
+    }
+    & h3{
+      font-size: 2rem;
+    }
+    & iframe{
+      width: 80%;
+    }
   }
-  .main-video {
-    grid-column: span 2;
+  .main-about {
+    &-p p {
+      font-size: 0.6em;
+    }
   }
-}
-
-/* -------------- MEDIA QUERY (MIN: 768 / MAX: 1024) */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .contenedor-videos h3 {
-    font-size: 2rem;
-  }
-  .contenedor-videos iframe {
-    width: 80%;
-  }
-}
-
-/* ----------------------- MEDIA QUERY (MIN: 1025) ------------------------ */
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) {
-  .contenedor-videos h2 {
+  .main-video-principal {
+    justify-self: center;
     text-align: center;
-    font-size: 3rem;
+    grid-column: span 2;
   }
-  .main-video iframe {
-    width: 80%;
-  }
-  .main-video-principal iframe {
-    width: 50%;
+
+  .main-video {
+    text-align: center;
+    justify-self: center;
+    width: 90%;
+    & iframe {
+      width: 100%;
+    }
   }
 }
